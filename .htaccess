@@ -1,0 +1,8 @@
+# Eliminar el .php en todos los archivos
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+# Error 404
+ErrorDocument 404 http://localhost/thecanario/404
