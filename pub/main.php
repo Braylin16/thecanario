@@ -2,15 +2,19 @@
 
 <!-- info -->
 <h1 class="flow-text center">Titulo del articulo</h1>
-    <p class="center">
+    <p class="col s8 m7 right">
+        <i class="material-icons red-text left">favorite_border</i><b>4 Me gusta</b>
+    </p>
+    <p class="col s12 center">
         <strong class="green-text infoArticle">Etiqueta</strong>
         <time class="grey-text infoArticle" datetime="26 de Junio 2021">26 de Junio 2021</time> 
         <b class="infoArticle">Autor</b>
+        <span class="infoArticle">405 Visitas</span>
     </p>
 
     <!-- Miniatura -->
     <figure class="col s12">
-        <img src="images/mini.jpg" alt="descripcion de la imagen" class="responsive-img"><br>
+        <img src="images/mini.jpg" alt="descripcion de la imagen" class="responsive-img materialboxed"><br>
         <figcaption class="col s12">Descripcion de la imagen</figcaption>
     </figure>
 

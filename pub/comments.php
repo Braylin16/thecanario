@@ -7,15 +7,19 @@
 <div class="row">
     <form class="col s12">
         <div class="row">
-            <div class="input-field col s12 m12 l6 xl12">
+            <div class="input-field col s12 m12 l12 xl12">
             <i class="material-icons prefix">comment</i>
             <textarea id="comentario" class="materialize-textarea"></textarea>
             <label for="comentario">Realizar un comentario...</label>
 
             <!-- Boton -->
-            <button class="btn waves-effect green right" type="submit" name="action">Enviar
+            <button class="btn waves-effect green right" type="submit" name="action">Comentar
                 <i class="material-icons left">near_me</i>
             </button>
+
+            <div class="col s12">
+                <a href="">Pol&iacute;ticas de comentarios</a>
+            </div>
 
             </div>
         </div>

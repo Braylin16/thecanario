@@ -19,10 +19,19 @@ nav {
   z-index: 99;
 }
 
+/* Input de buscador */
 .input-field input[type=search] {
   padding: 10px 10px !important;
   margin: 12px 3.3rem !important;
   border: 1px solid black !important;
+}
+
+/* TextArea para escribir el articulo */
+#body {
+  padding: 10px 10px !important;
+  border: 1px solid black !important;
+  height: 35rem;
+  font-size: 1.3rem;
 }
 
 /* label input type search */
@@ -57,6 +66,16 @@ nav {
 section fieldset {
   border: 3px solid #4caf50;
   border-radius: 5px;
+}
+
+/* Convertir texto a mayuscula */
+.text-upper {
+  text-transform: uppercase;
+}
+
+/* Imagen adaptable */
+.img-adaptable {
+  object-fit: cover;
 }
 
 /* Para que el texto del articulo sea grande y pueda verse bien */
