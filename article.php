@@ -21,8 +21,6 @@
         </span>
         <!-- Menu -->
         <?php require_once('menu/menu.php') ?>
-        <!-- ModelLogin -->
-        <?php require_once('modals/login.php') ?>
         <!-- Contenido del articulo -->
         <?php require_once('pub/main.php') ?>
         <!-- Mas publicaciones -->

@@ -17,8 +17,6 @@
     <main class="container section">
         <!-- Menu -->
         <?php require_once('menu/menu.php') ?>
-        <!-- ModelLogin -->
-        <?php require_once('modals/login.php') ?>
 
         <section class="section row col s12 z-depth-1">
 

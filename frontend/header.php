@@ -64,7 +64,7 @@
                     </li>
 
                     <li>
-                        <a class="green-text modal-trigger" href="#modalLogin">
+                        <a class="green-text" href="login">
                             <b>Entrar</b>
                         </a>
                     </li>

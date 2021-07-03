@@ -21,8 +21,6 @@
         </span>
         <!-- Menu -->
         <?php require_once('menu/menu.php') ?>
-        <!-- ModelLogin -->
-        <?php require_once('modals/login.php') ?>
         <!-- Modal Eliminar -->
         <?php require_once('modals/delete-entrada.php') ?>
 

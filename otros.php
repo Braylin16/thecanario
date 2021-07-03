@@ -21,8 +21,6 @@
         </span>
         <!-- Menu -->
         <?php require_once('menu/menu.php') ?>
-        <!-- ModelLogin -->
-        <?php require_once('modals/login.php') ?>
         <!-- Parallax -->
         <?php require_once('otros_carp/parallax.php') ?>
         <!-- Los post mas populares -->

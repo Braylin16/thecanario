@@ -1,6 +1,6 @@
 <ul id="slide-out" class="sidenav">
     <li><a href="<?=$url?>"><i class="material-icons">home</i>Inicio</a></li>
-    <li><a class="green-text modal-trigger" href="#modalLogin"><i class="material-icons">person</i><b>Entrar</b></a></li>
+    <li><a class="green-text" href="login"><i class="material-icons">person</i><b>Entrar</b></a></li>
     <li><a href="register" class="green-text"><i class="material-icons">person_add</i>Registrarse</a></li>
     <li><a href="post"><i class="material-icons">publish</i>Crear una entrada</a></li>
     <li><a href="publications"><i class="material-icons">public</i>Mis pubicaciones</a></li>
