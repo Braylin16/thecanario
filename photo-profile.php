@@ -1,3 +1,13 @@
+<?php session_start();
+require_once('connection/connection.php');
+$email = $_SESSION['email'];
+require_once('functions/functions.php');
+require_once('user/user.php');
+require_once('backend/photo-profile.php');
+
+// Si no esta logueado | Redireccionar
+logueado();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,25 +29,41 @@
         <section class="section row col s12 z-depth-1">
 
             <h1 class="flow-text center">Agrega una foto de perfil</h1>
+
+            <!-- Imprimir los errores -->
+            <?php if(count($errors) > 0) : ?>
+                <ol>
+                    <?php foreach ($errors as $error) { ?>
+                        <li class="red-text"><?php echo $error; ?></li>
+                    <?php } ?>
+                </ol>
+            <?php endif ?>
+
+            <p class="flow-text green white-text center"><?php if(isset($success)){echo $success;} ?></p>
+
             <div class="divider"></div><br>
 
             <div class="center">
-                <img src="images/yo.jpg" class="img-adaptable circle" alt="Foto de perfil" height="160">
+                <?php if($photo == false) : ?>
+                    <img src="images/usuario.png" class="img-adaptable circle" alt="Foto de perfil" height="160">
+                <?php else : ?>
+                    <img src="img-profile/<?=$photo?>" class="img-adaptable" alt="<?=$name.' '.$surname?>" height="160">
+                <?php endif ?>
             </div>
 
-            <form action="#">
+            <form method="POST" enctype="multipart/form-data">
                 <div class="file-field input-field">
                 <div class="btn green">
                     <span><i class="material-icons black-text">image</i></span>
-                    <input type="file" required>
+                    <input type="file" name="img" required>
                 </div>
                 <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" placeholder="Seleciona una foto para tu perfil">
+                    <input class="file-path validate" name="img" type="text" placeholder="Seleciona una foto para tu perfil">
                 </div>
                 </div>
 
                 <!-- Boton -->
-                <button class="btn waves-effect green right" type="submit" name="action">Enviar
+                <button class="btn waves-effect green right" type="submit" name="submit">Enviar
                     <i class="material-icons left">near_me</i>
                 </button>
             </form>

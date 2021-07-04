@@ -1,3 +1,12 @@
+<?php session_start(); 
+require_once('connection/connection.php');
+require_once('functions/functions.php');
+if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+    require_once('user/user.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

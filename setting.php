@@ -1,3 +1,14 @@
+<?php session_start();
+require_once('connection/connection.php');
+$email = $_SESSION['email'];
+require_once('functions/functions.php');
+require_once('user/user.php');
+require_once('backend/setting.php');
+
+// Si no esta logueado | Redireccionar
+logueado();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,36 +30,45 @@
         <section class="section row col s12 z-depth-1">
 
             <h1 class="flow-text center">Editar informaci&oacute;n de la cuenta</h1>
+
+            <!-- Imprimir los errores -->
+            <?php if(count($errors) > 0) : ?>
+                <ol>
+                    <?php foreach ($errors as $error) { ?>
+                        <li class="red-text"><?php echo $error; ?></li>
+                    <?php } ?>
+                </ol>
+            <?php endif ?>
+
+            <!-- Imprimir el msg de exito -->
+            <?php if(isset($success)) : ?>
+                <p class="flow-text green white-text center"><?=$success?></p>
+            <?php endif ?>
+
             <div class="divider"></div>
 
             <form class="col s12" method="POST">
                 <div class="row">
 
                     <!-- Nombre -->
-                    <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="name" type="text" class="validate">
-                    <label for="name">name</label>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="name" type="text" name="name" value="<?=$name?>" class="validate" required>
+                        <label for="name">name</label>
                     </div>
 
                     <!-- Apellido -->
-                    <div class="input-field col s6">
-                    <i class="material-icons prefix">person</i>
-                    <input id="surname" type="text" class="validate">
-                    <label for="surname">Apellidos</label>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">person</i>
+                        <input id="surname" type="text" name="surname" value="<?=$surname?>" class="validate" required>
+                        <label for="surname">Apellidos</label>
                     </div>
 
-                    <!-- Email -->
-                    <div class="input-field col s12">
-                    <i class="material-icons prefix">mail</i>
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Correo elctr&oacute;nico</label>
-
                     <!-- Boton -->
-                    <button class="btn waves-effect green right" type="submit" name="action">Actualizar
-                        <i class="material-icons left">edit</i>
-                    </button>
-
+                    <div class="input-field col s12">
+                        <button class="btn waves-effect green right" type="submit" name="submit">Actualizar
+                            <i class="material-icons left">edit</i>
+                        </button>
                     </div>
 
                 </div>

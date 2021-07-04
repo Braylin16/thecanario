@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 // Estado del usuario
 $status = 'acept';
@@ -163,7 +163,8 @@ if(isset($_POST['submit'])){
         
         $_SESSION['email'] = $email;
 
-        $success = 'Te has registrado con exito!';
+        // Te has registrado con exito
+        header('Location: photo-profile');
     }
 
 }

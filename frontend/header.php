@@ -1,6 +1,8 @@
 <?php require_once('url/url.php') ?>
 <!-- Header -->
 <header>
+    <!-- Dropdown -->
+    <?php require_once('./dropdown/header.php') ?>
     <!-- Navbar -->
     <div class="navbar-fixed">
         <nav class="lime lighten-5">
@@ -63,17 +65,34 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a class="green-text" href="login">
-                            <b>Entrar</b>
-                        </a>
-                    </li>
+                    <!-- Si el usuario esta logueado | ocultarlo -->
+                    <?php if(!isset($_SESSION['email'])) : ?>
+                        <li>
+                            <a class="green-text" href="login">
+                                <b>Entrar</b>
+                            </a>
+                        </li>
 
-                    <li>
-                        <a href="register">
-                            <b class="green-text">Unirse</b>
-                        </a>
-                    </li>
+                        <li>
+                            <a href="register">
+                                <b class="green-text">Unirse</b>
+                            </a>
+                        </li>
+                    <?php endif ?><!-- Fin de la condicion -->
+
+                    <!-- Foto de perfil del usuario -->
+                    <?php if(isset($_SESSION['email'])) : ?>
+                        <li>
+                            <a class='dropdown-trigger' href='#' data-target='dropdown1'>
+                                <?php if($photo == false) : ?>
+                                    <img src="images/usuario.png" class="img-adaptable circle img-dropdown" alt="<?=$name?>" height="30">
+                                <?php else : ?>
+                                    <img src="img-profile/<?=$photo?>" class="img-adaptable circle img-dropdown" alt="<?=$name?>" height="30">
+                                <?php endif ?>
+                                <i class="material-icons black-text right">arrow_drop_down</i>
+                            </a>
+                        </li>
+                    <?php endif ?>
 
                 </ul>
 

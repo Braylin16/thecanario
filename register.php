@@ -32,8 +32,6 @@
                 </ol>
             <?php endif ?>
 
-            <p class="green-text center"><?php if(isset($success)){echo $success;} ?></p>
-
             <form class="col s12" method="POST">
                 <div class="row">
 

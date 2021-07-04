@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 require_once('./url/url.php');
 
