@@ -14,14 +14,14 @@
 
     <!-- Miniatura -->
     <figure class="col s12">
-        <img src="images/mini.jpg" alt="descripcion de la imagen" class="responsive-img materialboxed"><br>
+        <img loading="lazy" src="images/gato.jpg" alt="descripcion de la imagen" class="responsive-img materialboxed"><br>
         <figcaption class="col s12">Descripcion de la imagen</figcaption>
     </figure>
 
     <!-- descripcion -->
-    <p class="col s12 flow-text">
+    <h3 class="col s12 flow-text">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unkno
-    </p>
+    </h3>
 
     <!-- contenido -->
     <p id="parrafoContent" class="col s12">
@@ -44,21 +44,6 @@
     </p>
 
     <!-- Tags -->
-    <nav class="col s12 white">
-        <ul>
-            <li>
-                <a href="" class="green-text">Paisaje</a>
-            </li>
-            <li>
-                <a href="" class="green-text">Flora</a>
-            </li>
-            <li>
-                <a href="" class="green-text">Playa y sol</a>
-            </li>
-            <li>
-                <a href="" class="green-text">Frutas</a>
-            </li>
-        </ul>
-    </nav>
+    <p class="col s12 center">Platano, Frutas, Mango, Peras</p>
 
 </section>

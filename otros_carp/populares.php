@@ -7,7 +7,7 @@
         <div class="col s12 m6 l4 xl3">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading='lazy' src="images/yo.jpg" alt="Titulo de la entrada">
                 <span class="card-title">Etiqueta</span>
             </div>
         <div class="card-content">
@@ -31,7 +31,7 @@
         <div class="col s12 m6 l4 xl3">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading='lazy' src="images/yo.jpg" alt="Titulo de la entrada">
                 <span class="card-title">Etiqueta</span>
             </div>
         <div class="card-content">
@@ -55,7 +55,7 @@
         <div class="col s12 m6 l4 xl3">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading='lazy' src="images/yo.jpg" alt="Titulo de la entrada">
                 <span class="card-title">Etiqueta</span>
             </div>
         <div class="card-content">
@@ -79,7 +79,7 @@
         <div class="col s12 m6 l4 xl3">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading='lazy' src="images/yo.jpg" alt="Titulo de la entrada">
                 <span class="card-title">Etiqueta</span>
             </div>
         <div class="card-content">
@@ -103,7 +103,7 @@
         <div class="col s12 m6 l4 xl3">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading='lazy' src="images/yo.jpg" alt="Titulo de la entrada">
                 <span class="card-title">Etiqueta</span>
             </div>
         <div class="card-content">
@@ -127,7 +127,7 @@
         <div class="col s12 m6 l4 xl3">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading='lazy' src="images/yo.jpg" alt="Titulo de la entrada">
                 <span class="card-title">Etiqueta</span>
             </div>
         <div class="card-content">
@@ -151,7 +151,7 @@
         <div class="col s12 m6 l4 xl3">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading='lazy' src="images/yo.jpg" alt="Titulo de la entrada">
                 <span class="card-title">Etiqueta</span>
             </div>
         <div class="card-content">
@@ -175,7 +175,7 @@
         <div class="col s12 m6 l4 xl3">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading='lazy' src="images/yo.jpg" alt="Titulo de la entrada">
                 <span class="card-title">Etiqueta</span>
             </div>
         <div class="card-content">

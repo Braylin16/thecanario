@@ -8,7 +8,7 @@
             <!-- <h3 class="header">Horizontal Card</h3> -->
             <div class="card horizontal">
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img loading='lazy' class='img-adaptable' src="images/gato.jpg" height='190' width='100'>
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -28,7 +28,7 @@
             <!-- <h3 class="header">Horizontal Card</h3> -->
             <div class="card horizontal">
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img loading='lazy' class='img-adaptable' src="images/gato.jpg" height='190' width='100'>
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -48,7 +48,7 @@
             <!-- <h3 class="header">Horizontal Card</h3> -->
             <div class="card horizontal">
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img loading='lazy' class='img-adaptable' src="images/gato.jpg" height='190' width='100'>
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -68,7 +68,7 @@
             <!-- <h3 class="header">Horizontal Card</h3> -->
             <div class="card horizontal">
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img loading='lazy' class='img-adaptable' src="images/gato.jpg" height='190' width='100'>
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -88,7 +88,7 @@
             <!-- <h3 class="header">Horizontal Card</h3> -->
             <div class="card horizontal">
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img loading='lazy' class='img-adaptable' src="images/gato.jpg" height='190' width='100'>
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -108,7 +108,7 @@
             <!-- <h3 class="header">Horizontal Card</h3> -->
             <div class="card horizontal">
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img loading='lazy' class='img-adaptable' src="images/gato.jpg" height='190' width='100'>
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -128,7 +128,7 @@
             <!-- <h3 class="header">Horizontal Card</h3> -->
             <div class="card horizontal">
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img loading='lazy' class='img-adaptable' src="images/gato.jpg" height='190' width='100'>
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -148,7 +148,7 @@
             <!-- <h3 class="header">Horizontal Card</h3> -->
             <div class="card horizontal">
             <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img loading='lazy' class='img-adaptable' src="images/gato.jpg" height='190' width='100'>
             </div>
             <div class="card-stacked">
                 <div class="card-content">

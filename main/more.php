@@ -7,7 +7,7 @@
         <div class="col s12 m12 xl12">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
                 <span class="card-title">Etiqueta</span>
             </div>
             <div class="card-content">
@@ -33,7 +33,7 @@
         <div class="col s12 m12 xl12">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
                 <span class="card-title">Etiqueta</span>
             </div>
             <div class="card-content">
@@ -59,7 +59,7 @@
         <div class="col s12 m12 xl12">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
                 <span class="card-title">Etiqueta</span>
             </div>
             <div class="card-content">
@@ -85,7 +85,7 @@
         <div class="col s12 m12 xl12">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
                 <span class="card-title">Etiqueta</span>
             </div>
             <div class="card-content">
@@ -111,7 +111,7 @@
         <div class="col s12 m12 xl12">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
                 <span class="card-title">Etiqueta</span>
             </div>
             <div class="card-content">
@@ -137,7 +137,7 @@
         <div class="col s12 m12 xl12">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
                 <span class="card-title">Etiqueta</span>
             </div>
             <div class="card-content">
@@ -163,7 +163,7 @@
         <div class="col s12 m12 xl12">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
                 <span class="card-title">Etiqueta</span>
             </div>
             <div class="card-content">
@@ -189,7 +189,7 @@
         <div class="col s12 m12 xl12">
         <div class="card">
             <div class="card-image">
-                <img src="images/yo.jpg">
+                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
                 <span class="card-title">Etiqueta</span>
             </div>
             <div class="card-content">

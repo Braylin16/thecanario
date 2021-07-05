@@ -28,7 +28,7 @@
 
 <!-- Primer comentario -->
 <div class="col s2 m1 l1 xl1">
-    <img src="images/yo.jpg" alt="Nombre del usuario" class="circle" height="60">
+    <img loading="lazy" src="images/yo.jpg" alt="Nombre del usuario" class="circle" height="60">
 </div>
 <div class="col s10 m11 l11 xl11">
     <b class="green-text">Nombre del usuario</b> <span>&#8226;</span>
@@ -40,7 +40,7 @@
 
 <!-- Segundo comentario -->
 <div class="col s2 m1 l1 xl1">
-    <img src="images/yo.jpg" alt="Nombre del usuario" class="circle" height="60">
+    <img loading="lazy" src="images/yo.jpg" alt="Nombre del usuario" class="circle" height="60">
 </div>
 <div class="col s10 m11 l11 xl11">
     <b class="green-text">Nombre del usuario</b> <span>&#8226;</span>
@@ -52,7 +52,7 @@
 
 <!-- Tercer comentario -->
 <div class="col s2 m1 l1 xl1">
-    <img src="images/yo.jpg" alt="Nombre del usuario" class="circle" height="60">
+    <img loading="lazy" src="images/yo.jpg" alt="Nombre del usuario" class="circle" height="60">
 </div>
 <div class="col s10 m11 l11 xl11">
     <b class="green-text">Nombre del usuario</b> <span>&#8226;</span>
