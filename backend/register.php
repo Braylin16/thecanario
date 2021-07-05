@@ -124,6 +124,19 @@ if(isset($_POST['submit'])){
         array_push($errors, 'La contrase&ntilde;a no debe tener mas de 30 carateres');
     }
 
+    // Validar el numero de carateres para el email
+    $emailLen = strlen($email);
+
+    $emailLen = strlen($email);
+    if($emailLen < 6){
+        array_push($errors, 'El email tiene muy pocos carateres');
+    }
+
+    if($emailLen > 50){
+        array_push($errors, 'El email ha superado la cantidad de carateres permitidos');
+    }
+
+
     // Cifrar la pass
     $pass = hash('sha512', $pass);
 

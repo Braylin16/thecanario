@@ -101,13 +101,11 @@ create_at_search    datetime
 
 CREATE TABLE contact(
 id_contact          int(250) AUTO_INCREMENT PRIMARY KEY,
-id_contact_user     int(250),
 name_c              varchar(100) NOT NULL,
-surname_c           varchar(100) NOT NULL,
+assunt_c            varchar(250) NOT NULL,
 email_c             varchar(100) NOT NULL,
 message_c           text NOT NULL,
-browser_contact     varchar(200),
-ip_contact          varchar(200),
-crate_at_contact    datetime,
-CONSTRAINT fk_contact_user FOREIGN KEY(id_contact_user) REFERENCES users(id_user)
+browser_c           varchar(200),
+ip_c                varchar(200),
+create_at_c         datetime
 )ENGINE=InnoDb;

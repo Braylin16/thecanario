@@ -5,6 +5,7 @@ if(isset($_SESSION['email'])){
     $email = $_SESSION['email'];
     require_once('user/user.php');
 }
+require_once('backend/suscribe.php');
 
 ?>
 <!DOCTYPE html>

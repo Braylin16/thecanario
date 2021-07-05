@@ -29,7 +29,7 @@
 
                     <div class="input-field col s12">
                         <i class="material-icons prefix">mail</i>
-                        <input id="emailLogin" type="email" name="emailLogin" class="validate" required>
+                        <input id="emailLogin" type="email" name="emailLogin" value="<?php if(isset($_POST["email"])){echo $email;} ?>" class="validate" required>
                         <label for="emailLogin">Correo electr&oacute;nico</label>
                     </div>
 
