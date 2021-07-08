@@ -1,3 +1,34 @@
+<?php session_start();
+
+// Requeriemintos
+require_once('connection/connection.php');
+require_once('functions/functions.php');
+require_once('url/url.php');
+require_once('backend/suscribe.php');
+
+// Si no ha iniciado sesion, se sacdar datos del usuario
+if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+    require_once('user/user.php');
+}
+
+// Si no nos llega ningun id, nos redirige al inicio
+if(!isset($_GET['id'])){
+    header("Location: $url");
+}
+
+$id_post = $_GET['id'];
+$id_post = (int)$id_post;
+
+$id_postN = is_numeric($id_post);
+if($id_postN == false){
+    header("Location: $url");
+}
+
+// Seleccionar los datos del articulo en base id que nos llega por get
+require_once('selects/article/article.php');
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

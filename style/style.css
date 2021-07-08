@@ -73,6 +73,12 @@ section fieldset {
   text-transform: uppercase;
 }
 
+/* Imagen circle */
+.circulo {
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
 /* Imagen adaptable */
 .img-adaptable {
   object-fit: cover;

@@ -1,3 +1,13 @@
+<?php session_start();
+require_once('connection/connection.php');
+$email = $_SESSION['email'];
+require_once('functions/functions.php');
+require_once('user/user.php');
+require_once('backend/post.php');
+
+// Si no esta logueado | Redireccionar
+logueado();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,20 +30,33 @@
 
         <section class="section row col s12 z-depth-1">
 
-            <form class="col s12" method="POST">
+        <!-- Imprimir los errores -->
+        <?php if(count($errors) > 0) : ?>
+                <ol>
+                    <?php foreach ($errors as $error) { ?>
+                        <li class="red-text"><?php echo $error; ?></li>
+                    <?php } ?>
+                </ol>
+            <?php endif ?>
+
+            <p class="flow-text green white-text center"><?php if(isset($success)){echo $success;} ?></p>
+
+            <div class="divider"></div>
+
+            <form class="col s12" method="POST" enctype="multipart/form-data">
                 <div class="row">
 
                     <!-- Titulo -->
                     <div class="input-field col s12">
                         <i class="material-icons prefix">title</i>
-                        <input id="title" type="text" class="validate" minlength="21" data-length="70" maxlength="70" autocomplete="off" required>
+                        <input id="title" type="text" name="title" value="<?php if(isset($_POST["title"])){echo $title;} ?>" class="validate" minlength="21" data-length="70" maxlength="70" autocomplete="off" required>
                         <label for="title">Titulo</label>
                     </div>
 
                     <!-- Contenido de la entrada -->
                     <div class="input-field col s12">
                         <i class="material-icons prefix">web</i>
-                        <textarea id="body" class="materialize-textarea white" placeholder="Escribe un excelente articulo"></textarea>
+                        <textarea id="body" name="body" class="materialize-textarea white" placeholder="Escribe un excelente articulo"><?php if(isset($_POST["body"])){echo $body;} ?></textarea>
                     </div>
 
                     <!-- Imagen -->
@@ -41,24 +64,31 @@
                         <div class="file-field input-field">
                             <div class="btn green">
                                 <span><i class="material-icons black-text">image</i></span>
-                                <input type="file" required>
+                                <input type="file" name="img" required>
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" placeholder="Selecciona una imagen">
+                                <input class="file-path validate" name="img" type="text" placeholder="Selecciona una imagen">
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Imagen description -->
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">description</i>
+                        <input id='imgDesc' type="text" name="imgDesc" value="<?php if(isset($_POST["imgDesc"])){echo $imgDesc;} ?>" class="validate" maxlength="100" required>
+                        <label for="imgDesc">descripci&oacute;n de la imagen</label>
                     </div>
 
                     <!-- Descripcion -->
                     <div class="input-field col s12">
                         <i class="material-icons prefix">description</i>
-                        <input id="input_text" type="text" class="validate" data-length="100" minlength="70" maxlength="100" required>
+                        <input id="input_text" type="text" name="description" value="<?php if(isset($_POST["description"])){echo $desc;} ?>" class="validate" data-length="100" minlength="70" maxlength="100" required>
                         <label for="input_text">Descripci&oacute;n</label>
                     </div>
 
                     <!-- Categoria -->
                     <div class="input-field col s12">
-                        <select>
+                        <select name="category">
                         <option value="" disabled selected>Elige una categoria</option>
                         <option value="Astronomia">Astronomia</option>
                         <option value="Tecnología">Tecnolog&iacute;a</option>
@@ -71,13 +101,14 @@
                     <!-- Tags -->
                     <div class="input-field col s12">
                         <i class="material-icons prefix">text_fields</i>
-                        <input id="tags" type="text" class="validate">
+                        <input id="tags" type="text" name="tags" value="<?php if(isset($_POST["tags"])){echo $tags;} ?>" class="validate" required>
                         <label for="tags">Palabras claves (Separar con ",")</label>
                     </div>
 
                     <!-- Boton -->
                     <div class="input-field col s12">
-                        <button class="btn waves-effect green right" type="submit" name="action">Publicar entrada
+                        <button class="btn waves-effect green right" type="submit" name="submit">
+                            Publicar entrada
                             <i class="material-icons left">near_me</i>
                         </button>
                     </div>

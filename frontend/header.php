@@ -85,9 +85,9 @@
                         <li>
                             <a class='dropdown-trigger' href='#' data-target='dropdown1'>
                                 <?php if($photo == false) : ?>
-                                    <img src="images/usuario.png" class="img-adaptable circle img-dropdown" alt="<?=$name?>" height="30">
+                                    <img src="images/usuario.png" class="img-adaptable circle img-dropdown" alt="<?=$name?>" height='30' width='30' />
                                 <?php else : ?>
-                                    <img src="img-profile/<?=$photo?>" class="img-adaptable circle img-dropdown" alt="<?=$name?>" height="30">
+                                    <img src="img-profile/<?=$photo?>" class="img-adaptable circulo img-dropdown" alt="<?=$name?>" height='30' width='30' />
                                 <?php endif ?>
                                 <i class="material-icons black-text right">arrow_drop_down</i>
                             </a>
