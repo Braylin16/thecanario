@@ -3,7 +3,7 @@
 // Estado del usuario
 $status = 'acept';
 
-//Roll del usuario a user por defecto
+// Roll del usuario a user por defecto
 $roll = 'User';
 
 // Obtener direccion ip del cliente

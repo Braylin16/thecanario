@@ -27,6 +27,12 @@ if($id_postN == false){
 
 // Seleccionar los datos del articulo en base id que nos llega por get
 require_once('selects/article/article.php');
+// Selecionar las publicaciones de "Mas publicaciones"
+require_once('selects/article/morepub.php');
+// Insertar los comentarios
+require_once('backend/comments.php');
+// Selecionar todos los comentarios
+require_once('selects/comments/comments.php');
 
 ?>
 <!DOCTYPE html>
