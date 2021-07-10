@@ -25,6 +25,38 @@ if($id_postN == false){
     header("Location: $url");
 }
 
+// Sacar los id
+$sql = $conexion->query("SELECT id_post, title FROM post WHERE id_post = $id_post");
+$sql->execute();
+while ($row = $sql->fetch()) {
+    $all_id_post = $row['id_post'];
+    $title = $row['title'];
+
+}
+
+// Pasar la variable titulo por la URL
+$titleURL = str_replace(' ', '-', $title);
+$titleURL = strtolower($titleURL);
+
+// Verificar que llegue el titulo por la URL
+// if(isset($_GET['title'])){
+//     $titleGET = $_GET['title'];
+// }else{
+//     header("Location: article.php/$id_post/$titleURL");
+// }
+
+// Verificar que llegue el titulo por la URL
+if(isset($_GET['title'])){
+    $titleGET = $_GET['title'];
+}else{
+    header("Location: article?id=$id_post&title=$titleURL");
+}
+
+// Si introducen un id que no existe, lo lleva a la pagina de inicio
+if($id_post > $all_id_post || $id_post == 0) {
+    header("Location: $url");
+}
+
 // Seleccionar los datos del articulo en base id que nos llega por get
 require_once('selects/article/article.php');
 // Selecionar las publicaciones de "Mas publicaciones"
@@ -33,21 +65,25 @@ require_once('selects/article/morepub.php');
 require_once('backend/comments.php');
 // Selecionar todos los comentarios
 require_once('selects/comments/comments.php');
-
+// Cantidad de comentarios en cada post
+require_once('count/comment/count-comment.php')
 ?>
+<?php foreach($result as $post) : ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titulo del articulo | The Canario</title>
+    <title><?php echo $post['title'] ?> | The Canario</title>
+    <meta name="description" content="<?php echo $post['description_post'] ?>">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
     <script src="jquery/jquery.min.js"></script>
     <script src="js/goto.js"></script>
 </head>
+<?php endforeach ?>
 <body class="grey lighten-4">
     <?php require_once('frontend/header.php') ?>
 

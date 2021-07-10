@@ -1,7 +1,11 @@
 <!-- Comentarios -->
 <section id="commentArticle" class="col s12 m12 l8 xl8 white z-depth-1">
 
-<h4 class="flow-text">(3) Comentarios</h4>
+<?php if($countComment > 0) : ?>
+    <h4 class="flow-text">(<?=$countComment?>) Comentarios</h4>
+    <div class="divider"></div>
+<?php endif ?>
+
 <!-- Imprimir los errores -->
 <?php if(count($errorsC) > 0) : ?>
     <ol>
@@ -13,7 +17,6 @@
 
 <p class="flow-text red white-text center"><?php if(isset($sesion)){echo $sesion;} ?></p>
 <p class="flow-text green white-text center"><?php if(isset($successC)){echo $successC;} ?></p>
-<div class="divider"></div>
 
 <div class="row">
     <form class="col s12" method='POST'>
