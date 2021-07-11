@@ -59,7 +59,9 @@ require_once('backend/comments.php');
 // Selecionar todos los comentarios
 require_once('selects/comments/comments.php');
 // Cantidad de comentarios en cada post
-require_once('count/comment/count-comment.php')
+require_once('count/comment/count-comment.php');
+// Contador de visitas
+require_once('view/view.php');
 ?>
 <?php foreach($result as $post) : ?>
 <!DOCTYPE html>

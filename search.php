@@ -1,10 +1,21 @@
+<?php session_start(); 
+require_once('connection/connection.php');
+require_once('functions/functions.php');
+require_once('url/url.php');
+if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+    require_once('user/user.php');
+}
+require_once('backend/search.php');
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busqueda | The Canario</title>
+    <title><?=$search?> | The Canario</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
@@ -23,78 +34,37 @@
         <?php require_once('menu/menu.php') ?>
 
         <section class="row">
-                <h1 class="flow-text center">5 resultados</h1>
-                <div class="divider"></div>
+            <h1 class="flow-text center">Resultados de busqueda: <b class='blue-text'><?=$search?></b></h1>
+            <?php if(isset($errors)) : ?>
+                <p class="flow-text red white-text center"><?=$errors?></p>
+            <?php endif ?>
+            <div class="divider"></div>
+
+            <?php foreach($result as $post) : ?>
+
+                <?php
+                
+                // Convertir el titulo a una URL
+                $titleURL = str_replace(' ', '-', $post['title']);
+                $titleURL = strtolower($titleURL);
+                
+                ?>
 
                 <article class="col s12">
+                    <a href="article/<?=$post['id_post']?>/<?=$titleURL?>">
+                        <p class='col s6 m4 xl3'>
+                            <img src="img/<?=$post['miniatura']?>" alt="<?=$post['title']?>" class="img-adaptable" width="190" height="170">
+                        </p>
 
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        <span class="grey-text">210 Visitas</span><br>
-                        <span class="green-text text-upper">Etiqueta</span>
-                    </div>
-
+                        <div class="col s6 m8 xl9">
+                            <h2 class="flow-text black-text"><?=$post['title']?></h2>
+                            <span class="grey-text"><?=$post['view']?> Visitas</span><br>
+                            <span class="green-text text-upper"><?=$post['category']?></span>
+                        </div>
+                    </a>
                 </article>
+            <?php endforeach ?>
 
-                <article class="col s12">
-
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        <span class="grey-text">210 Visitas</span><br>
-                        <span class="green-text">Etiqueta</span>
-                    </div>
-
-                </article>
-
-                <article class="col s12">
-
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        <span class="grey-text">210 Visitas</span><br>
-                        <span class="green-text">Etiqueta</span>
-                    </div>
-
-                </article>
-
-                <article class="col s12">
-
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        <span class="grey-text">210 Visitas</span><br>
-                        <span class="green-text">Etiqueta</span>
-                    </div>
-
-                </article>
-
-                <article class="col s12">
-
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        <span class="grey-text">210 Visitas</span><br>
-                        <span class="green-text">Etiqueta</span>
-                    </div>
-
-                </article>
         </section>
 
     </main>

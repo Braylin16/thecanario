@@ -24,7 +24,7 @@
                     <!-- Buscador -->
                     <li id="input-search">
                         <div class="row">
-                            <form action="" method="GET" class="col s12">
+                            <form action="./search" method="GET" class="col s12">
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="search-header" name="search" type="search" placeholder="Buscar..." class="validate" autocomplete="off">
