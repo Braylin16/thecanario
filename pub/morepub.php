@@ -8,6 +8,7 @@
                 $id_more_post = $row['id_post'];
                 $img = $row['miniatura'];
                 $title = $row['title'];
+                $view = $row['view'];
                 $category = $row['category'];
                 $fecha = $row['create_at_post'];
 
@@ -26,7 +27,7 @@
                             <div class="card-content">
                             <p>
                                 <i class="material-icons left grey-text">visibility</i>
-                                <span class="grey-text">81</span>
+                                <span class="grey-text"><?=$view?></span>
 
                                 <i class="material-icons red-text right">favorite_border</i>
                             </p>

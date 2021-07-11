@@ -42,16 +42,14 @@
 
 <!-- Comentario -->
 <?php foreach($comentC as $postC) : ?>
-<div class="col s2 m1 l1 xl1">
-    <img loading="lazy" src="img-profile/<?php echo $postC['photo_profile'] ?>" alt="<?php echo $postC['name'].' '.$postC['surname'] ?>" class="circle img-adaptable" height='60' width='60'>
-</div>
-<div class="col s10 m11 l11 xl11">
-    <b class="green-text"><?php echo $postC['name'].' '.$postC['surname'] ?></b> <span>&#8226;</span>
-    <time class="grey-text" datetime="<?php echo form_fecha($postC['create_at_comment']) ?>"><?php echo form_fecha($postC['create_at_comment']) ?></time>
-    <p><?php echo $postC['comment'] ?></p>
-    <i class="material-icons left red-text">favorite_border</i>
-    <b>3 Me gusta</b><br><br>
-</div>
+    <div class="col s2 m1 l1 xl1">
+        <img loading="lazy" src="img-profile/<?php echo $postC['photo_profile'] ?>" alt="<?php echo $postC['name'].' '.$postC['surname'] ?>" class="circle img-adaptable" height='60' width='60'>
+    </div>
+    <div class="col s10 m11 l11 xl11">
+        <b class="green-text"><?php echo $postC['name'].' '.$postC['surname'] ?></b> <span>&#8226;</span>
+        <time class="grey-text" datetime="<?php echo form_fecha($postC['create_at_comment']) ?>"><?php echo form_fecha($postC['create_at_comment']) ?></time>
+        <p><?php echo $postC['comment'] ?></p><br>
+    </div>
 <?php endforeach ?>
 
 </section>

@@ -3,9 +3,6 @@
 
 <!-- info -->
 <h1 class="flow-text center"><?php echo $post['title'] ?></h1>
-    <p class="col s8 m7 right">
-        <i class="material-icons red-text left">favorite_border</i><b>4 Me gusta</b>
-    </p>
     <p class="col s12 center">
         <strong class="green-text infoArticle"><?php echo $post['category'] ?></strong>
         <time class="grey-text infoArticle" datetime="26 de Junio 2021"><?php echo form_fecha($post['create_at_post']) ?></time> 

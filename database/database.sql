@@ -45,32 +45,6 @@ CONSTRAINT fk_comment_post FOREIGN KEY(id_comment_post) REFERENCES post(id_post)
 CONSTRAINT fk_comment_user FOREIGN KEY(id_comment_user) REFERENCES users(id_user)
 )ENGINE=InnoDb;
 
-CREATE TABLE like_post(
-id_like             int(250) AUTO_INCREMENT PRIMARY KEY,
-id_like_post        int(250) NOT NULL,
-id_like_user        int(250) NOT NULL,
-like_post           int(250) NOT NULL,
-browser_like_pot    varchar(200),
-ip_like_post        varchar(200),
-create_at_like_post datetime,
-CONSTRAINT fk_like_post_post FOREIGN KEY(id_like_post) REFERENCES post(id_post),
-CONSTRAINT fk_like_post_user FOREIGN KEY(id_like_user) REFERENCES users(id_user)
-)ENGINE=InnoDb;
-
-CREATE TABLE like_comment(
-id_like_c           int(250) AUTO_INCREMENT PRIMARY KEY,
-id_like_c_post      int(250) NOT NULL,
-id_like_c_user      int(250) NOT NULL,
-id_like_c_comment   int(250) NOT NULL,
-like_comment        int(250) NOT NULL,
-browser_like_c      varchar(200),
-ip_like_c           varchar(200),
-create_at_like_c    datetime,
-CONSTRAINT fk_like_c_post FOREIGN KEY(id_like_c_post) REFERENCES post(id_post),
-CONSTRAINT fk_like_c_user FOREIGN KEY(id_like_c_user) REFERENCES users(id_user),
-CONSTRAINT fk_like_c_comment FOREIGN KEY(id_like_c_comment) REFERENCES comments(id_comment)
-)ENGINE=InnoDb;
-
 CREATE TABLE `view`(
 id_view             int(250) AUTO_INCREMENT PRIMARY KEY,
 id_view_post        int(250) NOT NULL,
