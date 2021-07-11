@@ -39,17 +39,10 @@ $titleURL = str_replace(' ', '-', $title);
 $titleURL = strtolower($titleURL);
 
 // Verificar que llegue el titulo por la URL
-// if(isset($_GET['title'])){
-//     $titleGET = $_GET['title'];
-// }else{
-//     header("Location: article.php/$id_post/$titleURL");
-// }
-
-// Verificar que llegue el titulo por la URL
 if(isset($_GET['title'])){
     $titleGET = $_GET['title'];
 }else{
-    header("Location: article?id=$id_post&title=$titleURL");
+    header("Location: article/$id_post/$titleURL");
 }
 
 // Si introducen un id que no existe, lo lleva a la pagina de inicio
@@ -76,6 +69,7 @@ require_once('count/comment/count-comment.php')
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $post['title'] ?> | The Canario</title>
+    <base href="<?=$url?>">
     <meta name="description" content="<?php echo $post['description_post'] ?>">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
