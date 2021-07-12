@@ -1,3 +1,15 @@
+<?php session_start();
+require_once('connection/connection.php');
+$email = $_SESSION['email'];
+require_once('functions/functions.php');
+require_once('user/user.php');
+require_once('url/url.php');
+require_once('selects/mypublications.php');
+
+// Si no esta logueado | Redireccionar
+logueado();
+noAdmin($roll, $url);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,17 +37,33 @@
         <?php require_once('modals/delete-entrada.php') ?>
 
         <section class="row">
-                <h1 class="flow-text center">Todas mis publicaciones</h1>
-                <div class="divider"></div>
+            <h1 class="flow-text center">Todas mis publicaciones</h1>
+            <div class="divider"></div>
+
+            <?php foreach($mypost as $post) : ?>
+
+                <?php
+                
+                // Convertir el titulo a una URL
+                $titleURL = str_replace(' ', '-', $post['title']);
+                $titleURL = strtolower($titleURL);
+                
+                ?>
 
                 <article class="col s12">
 
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
+                    <a href="article/<?=$post['id_post']?>/<?=$titleURL?>">
+                        <p class='col s6 m4 xl3'>
+                            <img src="img/<?=$post['miniatura']?>" alt="<?=$post['title']?>" class="img-adaptable" width="190" height="170">
+                        </p>
+                    </a>
 
                     <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
+                        <a href="article/<?=$post['id_post']?>/<?=$titleURL?>">
+                            <h2 class="flow-text black-text">
+                                <?=$post['title']?>
+                            </h2>
+                        </a>
 
                         <!-- Editar -->
                         <a href="edit-post" class="waves-effect yellow btn"><i class="material-icons left">edit</i>Editar entrada</a>
@@ -45,78 +73,7 @@
                     </div>
 
                 </article>
-
-                <article class="col s12">
-
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        
-                        <!-- Editar -->
-                        <a class="waves-effect yellow btn"><i class="material-icons left">edit</i>Editar entrada</a>
-
-                        <!-- Eliminar -->
-                        <a href="#delete" class="waves-effect red btn modal-trigger"><i class="material-icons left">delete</i>Eliminar entrada</a>
-                    </div>
-
-                </article>
-
-                <article class="col s12">
-
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        
-                        <!-- Editar -->
-                        <a class="waves-effect yellow btn"><i class="material-icons left">edit</i>Editar entrada</a>
-
-                        <!-- Eliminar -->
-                        <a class="waves-effect red btn"><i class="material-icons left">delete</i>Eliminar entrada</a>
-                    </div>
-
-                </article>
-
-                <article class="col s12">
-
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        
-                        <!-- Editar -->
-                        <a class="waves-effect yellow btn"><i class="material-icons left">edit</i>Editar entrada</a>
-
-                        <!-- Eliminar -->
-                        <a class="waves-effect red btn"><i class="material-icons left">delete</i>Eliminar entrada</a>
-                    </div>
-
-                </article>
-
-                <article class="col s12">
-
-                    <p class='col s6 m4 xl3'>
-                        <img src="images/astronomia.jpg" alt="titulo del articulo" class="img-adaptable" width="190" height="170">
-                    </p>
-
-                    <div class="col s6 m8 xl9">
-                        <h2 class="flow-text">Sin fútbol ni apretones de manos: las prohibiciones de los pioneros soviéticos</h2>
-                        
-                        <!-- Editar -->
-                        <a class="waves-effect yellow btn"><i class="material-icons left">edit</i>Editar entrada</a>
-
-                        <!-- Eliminar -->
-                        <a class="waves-effect red btn"><i class="material-icons left">delete</i>Eliminar entrada</a>
-                    </div>
-
-                </article>
+            <?php endforeach ?>
         </section>
 
     </main>

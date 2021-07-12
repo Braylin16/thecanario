@@ -31,7 +31,7 @@ require_once('selects/morepost/morepost.php');
 
     <main class="row section col s12">
         <!-- Boton ir arriba -->
-        <span role="button" class="ir-arriba green">
+        <span role="button" class="ir-arriba green lighten-1">
             <i class="material-icons white-text">keyboard_arrow_up</i>
         </span>
         <!-- Menu -->

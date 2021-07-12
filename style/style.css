@@ -19,6 +19,11 @@ nav {
   z-index: 99;
 }
 
+/* Un espaciado entre el acide y mas view */
+aside {
+  margin-bottom: 10px;
+}
+
 /* Input de buscador */
 .input-field input[type=search] {
   padding: 10px 10px !important;

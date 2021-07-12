@@ -1,7 +1,16 @@
 <!-- Dropdown Structure -->
 <ul id='dropdown1' class='dropdown-content'>
     <li><a href="post" class="black-text"><i class="material-icons">publish</i>Crear un post</a></li>
-    <li><a href="publications" class="black-text"><i class="material-icons">public</i>Mis publicaciones</a></li>
+
+    <?php if($roll == 'Admin') : ?>
+        <li>
+            <a href="publications" class="black-text">
+                <i class="material-icons">public</i>
+                Mis publicaciones
+            </a>
+        </li>
+    <?php endif ?>
+    
     <li class="divider" tabindex="-1"></li>
     <li><a href="photo-profile" class="black-text"><i class="material-icons">image</i>Foto de perfil</a></li>
     <li><a href="setting" class="black-text"><i class="material-icons">settings</i>Configuraci&oacute;n</a></li>

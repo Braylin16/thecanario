@@ -7,6 +7,13 @@ function logueado(){
     }
 }
 
+// Si el usuario no es de tipo Admin, lo saca de la pagina
+function noAdmin($admin, $link){
+    if($admin != 'Admin'){
+        header("Location: $link");
+    }
+}
+
 // Formatear fecha
 function form_fecha($fecha){
     $times = strtotime($fecha);
