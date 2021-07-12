@@ -1,6 +1,6 @@
 <!-- Las mas leidas -->
-<section class="grey lighten-3 z-depth-1 col s12">
-    <h3 class="flow-text center">Las m&aacute;s leidas</h3>
+<section class="green z-depth-1 col s12">
+    <h3 class="white-text flow-text center">Las m&aacute;s leidas</h3>
 
     <!-- Article -->
     <article class="col s12 m4 l3 xl3">

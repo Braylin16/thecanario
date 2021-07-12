@@ -1,9 +1,9 @@
 <aside class="col s3 z-depth-1 hide-on-med-and-down">
 
-    <h2 class="flow-text center">
+    <h1 class="flow-text center">
         <i class="material-icons large">notifications_active</i><br>
         Mantente al d&iacute;a
-    </h2>
+    </h1>
 
     <!-- Imprimir los errores -->
     <?php if(count($errors) > 0) : ?>

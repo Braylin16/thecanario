@@ -1,77 +1,36 @@
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina" />
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">103</span>
+<section>
+    <?php foreach($mainPost as $main) : ?>
 
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
+    <?php
 
+    // Pasar la variable titulo por la URL
+    $titleURL = str_replace(' ', '-', $main['title']);
+    $titleURL = strtolower($titleURL);    
+        
+    ?>
+
+    <article class='col s12 m4 l3 xl3'>
+        <a href="article/<?=$main['id_post']?>/<?=$titleURL?>">
+            <div class="col s12 m12 xl12">
+            <div class="card">
+                <div class="card-image">
+                    <img loading='lazy' src="img/<?=$main['miniatura']?>" class='img-adaptable' alt="<?=$main['title']?>" height='160' />
+                    <b class='card-title orange-text'><?=$main['category']?></b>
+                </div>
+                <div class="card-content">
+                <p>
+                    <i class="material-icons left grey-text">visibility</i>
+                    <span class="grey-text"><?=$main['view']?></span>
+                </p>
+                <h2 class='flow-text black-text'><?=mb_substr($main['title'], 0, 40).'...'?></h2>
+                <p>
+                    <span class="green-text"><?=form_fecha($main['create_at_post'])?></span>
+                </p>
+                </div>
+            </div>
+            </div>
+        </a>
     </article>
-</section>
+    <?php endforeach ?>
 
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">17</span>
-
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
-
-    </article>
-</section>
-
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
-
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
-
-    </article>
 </section>

@@ -5,8 +5,13 @@ if(isset($_SESSION['email'])){
     $email = $_SESSION['email'];
     require_once('user/user.php');
 }
-require_once('backend/suscribe.php');
 
+// Suscribirse con el correo electronico
+require_once('backend/suscribe.php');
+// Selecionar los datos de las primeras 3 entras
+require_once('selects/main/main.php');
+// Mas publicaciones
+require_once('selects/morepost/morepost.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">

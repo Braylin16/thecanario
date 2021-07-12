@@ -2,210 +2,43 @@
     <h4 class="flow-text center">M&aacute;s publicaciones</h4>
 </section>
 
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
+<section>
+    <?php foreach($morePosts as $morePost) : ?>
 
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
+        <?php
+        // Pasar la variable titulo por la URL
+        $titleMorePost = str_replace(' ', '-', $morePost['title']);
+        $titleMorePost = strtolower($titleMorePost);      
+            
+        ?>
 
-    </article>
-</section>
+        <a href="article/<?=$morePost['id_post']?>/<?=$titleMorePost?>">
+            <article class='col s12 m4 l3 xl3'>
+                <div class='col s12 m12 xl12'>
+                    <div class='card'>
 
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
+                        <div class='card-image'>
+                            <img loading='lazy' src="img/<?=$morePost['miniatura']?>" alt="<?=$morePost['title']?>" height='160' />
+                            <b class="orange-text card-title"><?=$morePost['category']?></b>
+                        </div>
 
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
+                        <div class="card-content">
+                            <p>
+                                <i class="material-icons left grey-text">visibility</i>
+                                <span class="grey-text"><?=$morePost['view']?></span>
+                            </p>
+                            
+                            <h3 class='black-text flow-text'>
+                                <?=mb_substr($morePost['title'], 0, 40).'...'?>
+                            </h3>
 
-    </article>
-</section>
-
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
-
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
-
-    </article>
-</section>
-
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
-
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
-
-    </article>
-</section>
-
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
-
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
-
-    </article>
-</section>
-
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
-
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
-
-    </article>
-</section>
-
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
-
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
-
-    </article>
-</section>
-
-<section class="col s12 m4 l3 xl3">
-    <article>
-        <div class="col s12 m12 xl12">
-        <div class="card">
-            <div class="card-image">
-                <img loading="lazy" src="images/yo.jpg" alt="Titulo de la pagina">
-                <span class="card-title">Etiqueta</span>
-            </div>
-            <div class="card-content">
-            <p>
-                <i class="material-icons left grey-text">visibility</i>
-                <span class="grey-text">81</span>
-
-                <i class="material-icons red-text right">favorite_border</i>
-            </p>
-            <h1 class="flow-text">Titulo de la entrada</h1>
-            <p>
-                <span class="green-text">27 de Mayo de 2021</span>
-            </p>
-            </div>
-        </div>
-        </div>
-
-    </article>
+                            <p>
+                                <span class="green-text"><?=form_fecha($morePost['create_at_post'])?></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </a>
+    <?php endforeach ?>
 </section>
