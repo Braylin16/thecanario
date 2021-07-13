@@ -12,8 +12,8 @@
     <article class='col s12 m4 l3 xl3'>
         <a href="article/<?=$main['id_post']?>/<?=$titleURL?>">
             <div class="col s12 m12 xl12">
-            <div class="card">
-                <div class="card-image">
+            <div class='card hoverable'>
+                <div class='card-image'>
                     <img loading='lazy' src="img/<?=$main['miniatura']?>" class='img-adaptable' alt="<?=$main['title']?>" height='160' />
                     <b class='card-title orange-text'><?=$main['category']?></b>
                 </div>

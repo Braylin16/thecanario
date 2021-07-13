@@ -20,7 +20,7 @@
             <article>
                 <a href="article/<?=$id_more_post?>/<?=$titleMoreURL?>">
                     <div class="col s12 m6 l12 xl12">
-                        <div class="card">
+                        <div class="card hoverable">
                             <div class="card-image">
                                 <img loading="lazy" src="img/<?=$img?>" alt="<?=$title?>">
                             </div>

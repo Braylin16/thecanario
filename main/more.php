@@ -15,7 +15,7 @@
         <a href="article/<?=$morePost['id_post']?>/<?=$titleMorePost?>">
             <article class='col s12 m4 l3 xl3'>
                 <div class='col s12 m12 xl12'>
-                    <div class='card'>
+                    <div class='card hoverable'>
 
                         <div class='card-image'>
                             <img loading='lazy' src="img/<?=$morePost['miniatura']?>" alt="<?=$morePost['title']?>" height='160' />

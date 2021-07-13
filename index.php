@@ -12,6 +12,8 @@ require_once('backend/suscribe.php');
 require_once('selects/main/main.php');
 // Mas publicaciones
 require_once('selects/morepost/morepost.php');
+// Mas leidas
+require_once('selects/main/moreview.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
