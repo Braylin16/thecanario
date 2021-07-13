@@ -4,8 +4,11 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 
-# URL Amigable
+# URL Amigable POST
 RewriteRule ^article/([0-9]+) article.php?id=$1&title=$2
+
+# URL Amigable EDIT POST
+RewriteRule ^edit-post/([0-9]+) edit-post.php?id=$1&title=$2
 
 # Error 404
 ErrorDocument 404 http://localhost/thecanario/404

@@ -1,58 +1,50 @@
 <?php
 
-$status = 'public';
-
-// Obtener direccion ip del cliente
-$ip = $_SERVER['REMOTE_ADDR'];
-
-// Obtener el navegador del visitante
-$browser = $_SERVER['HTTP_USER_AGENT'];
-
-$maxSize = 2097152; // 2 MB
-
 $errors = [];
 $success = '';
+
+$maxSize = 2097152; // 2 MB
 
 if(isset($_POST['submit'])){
 
     $title = $_POST['title'];
-    $body = $_POST['body'];
-    $desc = $_POST['description'];
+    $entrada = $_POST['body'];
     $img = $_FILES['img'];
-    $imgDesc = $_POST['imgDesc'];
-    $tags = $_POST['tags'];
+    $descImg = $_POST['descImg'];
+    $desc = $_POST['desc'];
     $category = $_POST['category'];
+    $tags = $_POST['tags'];
 
-    // Validar que llegan los datos
+    // Validar que no llegen vacios los datos
     if(empty($title)){
-        array_push($errors, 'Escribe el titulo de la entrada');
+        array_push($errors, 'El titulo no puede estar vacio');
     }
 
-    if(empty($body)){
-        array_push($errors, 'Escribe el contenido de la entrada');
-    }
-
-    if(empty($desc)){
-        array_push($errors, 'Escribe la descripci&oacute;n de la entrada');
+    if(empty($entrada)){
+        array_push($errors, 'No puedes publicar una entrada vacia');
     }
 
     if(empty($img)){
-        array_push($errors, 'Sube una imagen representando tu articulo');
+        array_push($errors, 'Coloca una imagen a tu articulo');
     }
 
-    if(empty($imgDesc)){
-        array_push($errors, 'Coloca una descripci&oacute;n para tu imagen');
+    if(empty($descImg)){
+        array_push($errors, 'Escribe una descripci&oacute;n de tu imagen');
     }
 
-    if(empty($tags)){
-        array_push($errors, 'Escribe al menos 5 etiquetas para tu entrada');
+    if(empty($desc)){
+        array_push($errors, 'Una descripci&oacute;n es muy importante para el SEO');
     }
 
     if(empty($category)){
-        array_push($errors, 'Selecciona una categoria');
+        array_push($errors, 'Te has olvidado de elegir una categoria');
     }
 
-    // Limpiar datos
+    if(empty($tags)){
+        array_push($errors, 'Las etiquetas influyen mucho en el SEO');
+    }
+
+    // Limpiar los datos
     $title = htmlspecialchars($title);
     $title = trim($title);
     $title = filter_var($title, FILTER_SANITIZE_STRING);
@@ -61,6 +53,10 @@ if(isset($_POST['submit'])){
     $desc = trim($desc);
     $desc = filter_var($desc, FILTER_SANITIZE_STRING);
 
+    $descImg = htmlspecialchars($descImg);
+    $descImg = trim($descImg);
+    $descImg = filter_var($descImg, FILTER_SANITIZE_STRING);
+
     $category = htmlspecialchars($category);
     $category = trim($category);
     $category = filter_var($category, FILTER_SANITIZE_STRING);
@@ -68,10 +64,6 @@ if(isset($_POST['submit'])){
     $tags = htmlspecialchars($tags);
     $tags = trim($tags);
     $tags = filter_var($tags, FILTER_SANITIZE_STRING);
-
-    $imgDesc = htmlspecialchars($imgDesc);
-    $imgDesc = trim($imgDesc);
-    $imgDesc = filter_var($imgDesc, FILTER_SANITIZE_STRING);
 
     // Obtener el nombre y tipo de la imagen
     $imgName = $img['name'];
@@ -82,7 +74,7 @@ if(isset($_POST['submit'])){
     $descLen = strlen($desc);
     $tagsLen = strlen($tags);
     $imgLen = strlen($imgName);
-    $imgDescLen = strlen($imgDesc);
+    $imgDescLen = strlen($descImg);
 
     // if($titleLen <= 21 || $titleLen >= 70){
     //     array_push($errors, 'El titulo no puede tener menos de 21 carateres ni mas de 70');
@@ -123,29 +115,23 @@ if(isset($_POST['submit'])){
         array_push($errors, "Lo siento, no aceptamos esta extension: $imgType");
     }
 
-    // Si no hay errores, publicamos la entrada
+    // Una vez pasado este punto, entonces actualizamos
     if(count($errors) === 0){
-        $statement = $conexion->prepare('INSERT INTO post (id_post, id_post_user, title, description_post, category, miniatura, img_description, entrada, tags, status, browser_post, ip_post, create_at_post) VALUES(
-            null, :id_user, :title, :desc, :category, :imgName, :imgDesc, :body, :tags, :status, :browser, :ip, NOW())'
+        $statement = $conexion->prepare("UPDATE post SET title = '$title', description_post = '$desc', category = '$category', miniatura = '$imgName', img_description = '$descImg', entrada = '$entrada', tags = '$tags' WHERE id_post = $id_post AND id_post_user = $id_user"
         );
         $statement->execute(array(
             ':id_user' => $id_user,
+            ':id_post' => $id_post,
             ':title' => $title,
             ':desc' => $desc,
             ':category' => $category,
             ':imgName' => $imgName,
-            ':imgDesc' => $imgDesc,
-            ':body' => $body,
-            ':tags' => $tags,
-            ':status' => $status,
-            ':browser' => $browser,
-            ':ip' => $ip
+            ':descImg' => $descImg,
+            ':entrada' => $entrada,
+            ':tags' => $tags
         ));
 
-        // Te has registrado con exito
-        // header('Location: publications');
-
-        $success = 'Tu entrada se ha publicado con exito!';
+        $success = 'La entrada se ha modificado correctamente';
     }
 
 }
