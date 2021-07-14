@@ -3,10 +3,13 @@ require_once('connection/connection.php');
 $email = $_SESSION['email'];
 require_once('functions/functions.php');
 require_once('user/user.php');
+require_once('url/url.php');
 require_once('backend/post.php');
 
 // Si no esta logueado | Redireccionar
 logueado();
+// Si no es tipo admin | Lo redirije
+noAdmin($roll, $url);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -15,6 +18,7 @@ logueado();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear entrada | The Canario</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />

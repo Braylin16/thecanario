@@ -7,7 +7,9 @@
         <strong class="green-text infoArticle"><?php echo $post['category'] ?></strong>
         <time class="grey-text infoArticle" datetime="26 de Junio 2021"><?php echo form_fecha($post['create_at_post']) ?></time> 
         <b class="infoArticle"><?php echo $post['name'].' '.$post['surname'] ?></b>
-        <span class="infoArticle"><?=$visitas?> Visitas</span>
+        <?php if(isset($visitas)) : ?>
+            <span class="infoArticle"><?=$visitas?> Visitas</span>
+        <?php endif ?>
     </p>
 
     <!-- Miniatura -->

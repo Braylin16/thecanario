@@ -1,3 +1,17 @@
+<?php session_start(); 
+require_once('connection/connection.php');
+require_once('functions/functions.php');
+if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+    require_once('user/user.php');
+}
+
+// Seleccionar mas articulos de Astronomia
+require_once('selects/tecnologia/tecnologia.php');
+// Seleccionar mas articulos mas popular
+require_once('selects/tecnologia/moreview.php');
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Las &uacute;ltimas noticias de tecnolog&iacute;a a tu alcance | The Canario</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />

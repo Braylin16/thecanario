@@ -1,8 +1,15 @@
 <!-- Dropdown Structure -->
 <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="post" class="black-text"><i class="material-icons">publish</i>Crear un post</a></li>
-
     <?php if($roll == 'Admin') : ?>
+        <!-- Subir un post -->
+        <li>
+            <a href="post" class="black-text">
+                <i class="material-icons">publish</i>
+                Crear un post
+            </a>
+        </li>
+
+        <!-- Mis post -->
         <li>
             <a href="publications" class="black-text">
                 <i class="material-icons">public</i>

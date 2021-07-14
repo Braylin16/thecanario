@@ -71,7 +71,8 @@ require_once('view/view.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $post['title'] ?> | The Canario</title>
-    <base href="<?=$url?>">
+    <base href="<?=$url?>" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <meta name="description" content="<?php echo $post['description_post'] ?>">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
