@@ -5,7 +5,7 @@
     <!-- Primero -->
     <?php foreach($views as $view) : ?>
         <article>
-            <a href="article/<?=$view['id_post']?>/<?=clearUrl($view['title'])?>">
+            <a href="<?=$url?>/article/<?=$view['id_post']?>/<?=clearUrl($view['title'])?>">
                 <div class="col s12 m6 l4 xl3">
                 <div class="card hoverable">
                     <div class="card-image">

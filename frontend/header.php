@@ -42,25 +42,25 @@
                     </li>
 
                     <li>
-                        <a href="astronomia">
+                        <a href="<?=$url?>/astronomia">
                             <span class="black-text">Astronomía</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="tecnologia">
+                        <a href="<?=$url?>/tecnologia">
                             <span class="black-text">Tecnolog&iacute;a</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="historia">
+                        <a href="<?=$url?>/historia">
                             <span class="black-text">Historia</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="otros">
+                        <a href="<?=$url?>/otros">
                             <span class="black-text">Otros</span>
                         </a>
                     </li>
@@ -74,7 +74,7 @@
                         </li>
 
                         <li>
-                            <a href="register">
+                            <a href="<?=$url?>/register">
                                 <b class="green-text">Unirse</b>
                             </a>
                         </li>

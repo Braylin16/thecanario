@@ -4,16 +4,8 @@
 
     <!-- Article -->
     <?php foreach($masleida as $leida) : ?>
-
-        <?php
-        // Pasar la variable titulo por la URL
-        $titleMoreview = str_replace(' ', '-', $leida['title']);
-        $titleMoreview = strtolower($titleMoreview);      
-            
-        ?>
-
         <article class="col s12 m4 l3 xl3">
-            <a href="article/<?=$leida['id_post']?>/<?=$titleMoreview?>">
+            <a href="<?=$url?>/article/<?=$leida['id_post']?>/<?=clearUrl($leida['title'])?>">
                 <div class="col s12 m12 xl12">
                     <!-- <h3 class="header">Horizontal Card</h3> -->
                     <div class="card horizontal hoverable">

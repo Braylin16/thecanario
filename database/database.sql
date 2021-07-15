@@ -48,13 +48,11 @@ CONSTRAINT fk_comment_user FOREIGN KEY(id_comment_user) REFERENCES users(id_user
 CREATE TABLE `view`(
 id_view             int(250) AUTO_INCREMENT PRIMARY KEY,
 id_view_post        int(250) NOT NULL,
-id_view_user        int(250),
 view                int(250),
 browser_view        varchar(200),
 ip_view             varchar(200),
 create_at_view      datetime,
-CONSTRAINT fk_view_post FOREIGN KEY(id_view_post) REFERENCES post(id_post),
-CONSTRAINT fk_view_user FOREIGN KEY(id_view_user) REFERENCES users(id_user)
+CONSTRAINT fk_view_post FOREIGN KEY(id_view_post) REFERENCES post(id_post)
 )ENGINE=InnoDb;
 
 CREATE TABLE suscribe(

@@ -4,7 +4,7 @@
     <!-- Articulos -->
     <?php foreach($mypost as $morepost) : ?>
         <article>
-            <a href="article/<?=$morepost['id_post']?>/<?=clearUrl($morepost['title'])?>">
+            <a href="<?=$url?>/article/<?=$morepost['id_post']?>/<?=clearUrl($morepost['title'])?>">
                 <div class="col s12 m6 l4 xl3">
                     <div class="card hoverable">
                         <div class="card-image">

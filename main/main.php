@@ -1,7 +1,7 @@
 <section>
     <?php foreach($mainPost as $main) : ?>
         <article class='col s12 m4 l3 xl3'>
-            <a href="article/<?=$main['id_post']?>/<?=clearUrl($main['title'])?>">
+            <a href="<?=$url?>/article/<?=$main['id_post']?>/<?=clearUrl($main['title'])?>">
                 <div class="col s12 m12 xl12">
                 <div class='card hoverable'>
                     <div class='card-image'>

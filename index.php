@@ -1,6 +1,7 @@
 <?php session_start(); 
 require_once('connection/connection.php');
 require_once('functions/functions.php');
+require_once('url/url.php');
 if(isset($_SESSION['email'])){
     $email = $_SESSION['email'];
     require_once('user/user.php');
@@ -21,7 +22,8 @@ require_once('selects/main/moreview.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astronomia, Educaci&oacute;n y Tecnolog&iacute;a | The Canario</title>
+    <title>Astronomia, Educaci&oacute;n, Historia y Tecnolog&iacute;a | The Canario</title>
+    <link rel="canonical" href="<?=$url?>" />
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
