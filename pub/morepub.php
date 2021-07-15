@@ -12,13 +12,9 @@
                 $category = $row['category'];
                 $fecha = $row['create_at_post'];
 
-                // Pasar la variable titulo por la URL
-                $titleMoreURL = str_replace(' ', '-', $title);
-                $titleMoreURL = strtolower($titleMoreURL);
-
             ?>
             <article>
-                <a href="article/<?=$id_more_post?>/<?=$titleMoreURL?>">
+                <a href="article/<?=$id_more_post?>/<?=clearUrl($title)?>">
                     <div class="col s12 m6 l12 xl12">
                         <div class="card hoverable">
                             <div class="card-image">

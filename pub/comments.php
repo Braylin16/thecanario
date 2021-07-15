@@ -46,8 +46,15 @@
         <img loading="lazy" src="img-profile/<?php echo $postC['photo_profile'] ?>" alt="<?php echo $postC['name'].' '.$postC['surname'] ?>" class="circle img-adaptable" height='60' width='60'>
     </div>
     <div class="col s10 m11 l11 xl11">
+        <!-- Nombre -->
         <b class="green-text"><?php echo $postC['name'].' '.$postC['surname'] ?></b> <span>&#8226;</span>
-        <time class="grey-text" datetime="<?php echo form_fecha($postC['create_at_comment']) ?>"><?php echo form_fecha($postC['create_at_comment']) ?></time>
+
+        <!-- Fecha y hora -->
+        <time class="grey-text" datetime="<?php echo form_fecha($postC['create_at_comment']) ?>">
+            <?php echo fechaHora($postC['create_at_comment']) ?>
+        </time>
+
+        <!-- Comentario -->
         <p><?php echo $postC['comment'] ?></p><br>
     </div>
 <?php endforeach ?>

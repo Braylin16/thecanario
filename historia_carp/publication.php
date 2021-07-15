@@ -3,16 +3,8 @@
 
     <!-- Articulos -->
     <?php foreach($mypost as $morepost) : ?>
-
-        <?php
-        // Pasar la variable titulo por la URL
-        $titleURL = str_replace(' ', '-', $morepost['title']);
-        $titleURL = strtolower($titleURL);      
-            
-        ?>
-
         <article>
-            <a href="article/<?=$morepost['id_post']?>/<?=$titleURL?>">
+            <a href="article/<?=$morepost['id_post']?>/<?=clearUrl($morepost['title'])?>">
                 <div class="col s12 m6 l4 xl3">
                     <div class="card hoverable">
                         <div class="card-image">

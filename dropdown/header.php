@@ -1,6 +1,6 @@
 <!-- Dropdown Structure -->
 <ul id='dropdown1' class='dropdown-content'>
-    <?php if($roll == 'Admin') : ?>
+    <?php if(isset($roll) AND $roll === 'Admin') : ?>
         <!-- Subir un post -->
         <li>
             <a href="post" class="black-text">

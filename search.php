@@ -42,17 +42,8 @@ require_once('backend/search.php');
             <div class="divider"></div>
 
             <?php foreach($result as $post) : ?>
-
-                <?php
-                
-                // Convertir el titulo a una URL
-                $titleURL = str_replace(' ', '-', $post['title']);
-                $titleURL = strtolower($titleURL);
-                
-                ?>
-
                 <article class="col s12">
-                    <a href="article/<?=$post['id_post']?>/<?=$titleURL?>">
+                    <a href="article/<?=$post['id_post']?>/<?=clearUrl($post['title'])?>">
                         <p class='col s6 m4 xl3'>
                             <img src="img/<?=$post['miniatura']?>" alt="<?=$post['title']?>" class="img-adaptable" width="190" height="170">
                         </p>

@@ -4,9 +4,19 @@
 <!-- info -->
 <h1 class="flow-text center"><?php echo $post['title'] ?></h1>
     <p class="col s12 center">
+
+        <!-- Categoria -->
         <strong class="green-text infoArticle"><?php echo $post['category'] ?></strong>
-        <time class="grey-text infoArticle" datetime="26 de Junio 2021"><?php echo form_fecha($post['create_at_post']) ?></time> 
+
+        <!-- Fecha y hora del post -->
+        <time class="grey-text infoArticle" datetime="26 de Junio 2021">
+            <?php echo fechaHora($post['create_at_post']) ?>
+        </time>
+
+        <!-- Autor -->
         <b class="infoArticle"><?php echo $post['name'].' '.$post['surname'] ?></b>
+
+        <!-- Cantidad de visitas -->
         <?php if(isset($visitas)) : ?>
             <span class="infoArticle"><?=$visitas?> Visitas</span>
         <?php endif ?>

@@ -46,18 +46,9 @@ noAdmin($roll, $url);
             <div class="divider"></div>
 
             <?php foreach($mypost as $post) : ?>
-
-                <?php
-                
-                // Convertir el titulo a una URL
-                $titleURL = str_replace(' ', '-', $post['title']);
-                $titleURL = strtolower($titleURL);
-                
-                ?>
-
                 <article class="col s12">
 
-                    <a href="article/<?=$post['id_post']?>/<?=$titleURL?>">
+                    <a href="article/<?=$post['id_post']?>/<?=clearUrl($post['title'])?>">
                         <p class='col s6 m4 xl3'>
                             <img src="img/<?=$post['miniatura']?>" alt="<?=$post['title']?>" class="img-adaptable" width="190" height="170">
                         </p>
@@ -71,7 +62,7 @@ noAdmin($roll, $url);
                         </a>
 
                         <!-- Editar -->
-                        <a href="edit-post/<?=$post['id_post']?>/<?=$titleURL?>" class="waves-effect yellow btn"><i class="material-icons left">edit</i>Editar entrada</a>
+                        <a href="edit-post/<?=$post['id_post']?>/<?=clearUrl($post['title'])?>" class="waves-effect yellow btn"><i class="material-icons left">edit</i>Editar entrada</a>
 
                         <!-- Modal Structure -->
                         <div id="delete" class="modal">
