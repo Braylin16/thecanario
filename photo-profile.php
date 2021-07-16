@@ -56,7 +56,7 @@ logueado();
                 <div class="file-field input-field">
                 <div class="btn green">
                     <span><i class="material-icons black-text">image</i></span>
-                    <input type="file" name="img" required>
+                    <input type="file" name="img" accept="image/*" required>
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path validate" name="img" type="text" placeholder="Seleciona una foto para tu perfil">

@@ -7,6 +7,13 @@ function logueado(){
     }
 }
 
+// Si ha iniciado sesion | Redirecionarlo, funcion para login, register
+function initSesion(){
+    if(isset($_SESSION['email'])){
+        header('Location: http://localhost/thecanario/');
+    }
+}
+
 // Si el usuario no es de tipo Admin, lo saca de la pagina
 function noAdmin($admin, $link){
     if($admin != 'Admin'){

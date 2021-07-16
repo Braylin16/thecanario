@@ -24,10 +24,10 @@
                     <!-- Buscador -->
                     <li id="input-search">
                         <div class="row">
-                            <form action="./search" method="GET" class="col s12">
+                            <form id="form-search" action="./search" method="GET" class="col right l7 xl12">
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="search-header" name="search" type="search" placeholder="Buscar..." class="validate" autocomplete="off">
+                                        <input id="search-header" name="search" type="search" placeholder="Buscar articulo..." class="validate" autocomplete="off">
                                     </div>
                                 </div>
                             </form>

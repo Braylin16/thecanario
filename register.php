@@ -1,5 +1,13 @@
-<?php require_once('connection/connection.php') ?>
-<?php require_once('backend/register.php') ?>
+<?php
+
+require_once('connection/connection.php');
+require_once('functions/functions.php');
+require_once('backend/register.php');
+
+// Si esta logueado | redireccionarlo
+initSesion();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

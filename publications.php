@@ -55,7 +55,7 @@ noAdmin($roll, $url);
                     </a>
 
                     <div class="col s6 m8 xl9">
-                        <a href="article/<?=$post['id_post']?>/<?=$titleURL?>">
+                        <a href="article/<?=$post['id_post']?>/<?=clearUrl($post['title'])?>">
                             <h2 class="flow-text black-text">
                                 <?=$post['title']?>
                             </h2>

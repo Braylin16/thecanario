@@ -2,6 +2,8 @@
 require_once('connection/connection.php');
 require_once('functions/functions.php');
 require_once('url/url.php');
+// Recordar la sesion
+require_once('remenber/remenber.php');
 if(isset($_SESSION['email'])){
     $email = $_SESSION['email'];
     require_once('user/user.php');
@@ -17,11 +19,16 @@ require_once('selects/morepost/morepost.php');
 require_once('selects/main/moreview.php');
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta name="keywords" content="Astronomía, Educación, Historia, Tecnología, Blog">
+    <meta name="description" content="Disfruta del contenido mas rico en educación, astronomía, historia y tecnología">
+    <meta name="author" content="Dailin Ivan Payano" />
+    <meta name="owner" content="Dailin Ivan Payano" />
+    <meta name="robots" content="index, follow" />
     <title>Astronomia, Educaci&oacute;n, Historia y Tecnolog&iacute;a | The Canario</title>
     <link rel="canonical" href="<?=$url?>" />
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
@@ -30,6 +37,17 @@ require_once('selects/main/moreview.php');
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
     <script src="jquery/jquery.min.js"></script>
     <script src="js/goto.js"></script>
+
+    <!-- Redes Sociales -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Thecanario">
+    <meta name="twitter:creator" content="@Thecanario">
+    <meta property="og:title" content="Blog de Ciencias, Tecnolog&iacute;as y educaci&oacute;n">
+    <meta property="og:description" content="El contenido mas nutritivo para tu mente disponible en The Canario">
+    <meta property="og:image" content="<?=$url?>/images/canario.webp">
+    <meta property="og:url" content="<?=$url?>">
+    <meta property="og:type" content="website">
+
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>

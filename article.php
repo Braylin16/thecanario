@@ -6,6 +6,9 @@ require_once('functions/functions.php');
 require_once('url/url.php');
 require_once('backend/suscribe.php');
 
+// Recordar la sesion
+require_once('remenber/remenber.php');
+
 // Si no ha iniciado sesion, se sacdar datos del usuario
 if(isset($_SESSION['email'])){
     $email = $_SESSION['email'];
@@ -65,22 +68,39 @@ require_once('view/view.php');
 ?>
 <?php foreach($result as $post) : ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $post['title'] ?> | The Canario</title>
     <link rel="canonical" href="<?=$url?>/article/<?=$post['id_post']?>/<?=clearUrl($post['title'])?>" />
     <base href="<?=$url?>/" />
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Metas -->
     <meta name="description" content="<?php echo $post['description_post'] ?>">
     <meta name="keywords" content="<?php echo $post['tags'] ?>">
+    <meta name="author" content="<?=$post['name'].' '.$post['surname']?>" />
+    <meta name="owner" content="Dailin Ivan Payano" />
+    <meta name="robots" content="index, follow" />
+
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
     <script src="jquery/jquery.min.js"></script>
     <script src="js/goto.js"></script>
+
+    <!-- Redes Sociales -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Thecanario">
+    <meta name="twitter:creator" content="@Thecanario">
+    <meta property="og:title" content="<?=$post['title']?>">
+    <meta property="og:description" content="<?=$post['description_post']?>">
+    <meta property="og:image" content="<?=$url?>/img/<?=$post['miniatura']?>">
+    <meta property="og:url" content="<?=$url?>/article/<?=$post['id_post']?>/<?=clearUrl($post['title'])?>">
+    <meta property="og:type" content="website">
+
 </head>
 <?php endforeach ?>
 <body class="grey lighten-4">

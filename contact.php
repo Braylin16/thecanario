@@ -1,5 +1,9 @@
 <?php session_start(); 
 require_once('connection/connection.php');
+
+// Recordar la sesion
+require_once('remenber/remenber.php');
+
 if(isset($_SESSION['email'])){
     $email = $_SESSION['email'];
     require_once('user/user.php');
