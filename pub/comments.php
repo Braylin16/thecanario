@@ -32,7 +32,7 @@
             </button>
 
             <div class="col s12">
-                <a href="">Pol&iacute;ticas de comentarios</a>
+                <a href="<?=$url?>/terminos-y-condiciones#uso">Pol&iacute;ticas de comentarios</a>
             </div>
 
             </div>

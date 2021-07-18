@@ -8,7 +8,7 @@
         <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Centro de informaci&oacute;n</h5>
         <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">T&eacute;rminos y condiciones</a></li>
+            <li><a class="grey-text text-lighten-3" href="<?=$url?>/terminos-y-condiciones">T&eacute;rminos y condiciones</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Cookies</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Ayuda</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Quienes somos</a></li>

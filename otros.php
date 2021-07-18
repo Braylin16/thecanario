@@ -39,10 +39,6 @@ require_once('selects/otros/moreview.php');
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
 
-    <!-- Scripts -->
-    <script src="jquery/jquery.min.js"></script>
-    <script src="js/goto.js"></script>
-
     <!-- Redes Sociales -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Thecanario">
@@ -58,10 +54,6 @@ require_once('selects/otros/moreview.php');
     <?php require_once('frontend/header.php') ?>
 
     <main class="row col s12">
-        <!-- Boton ir arriba -->
-        <span role="button" class="ir-arriba green">
-            <i class="material-icons white-text">keyboard_arrow_up</i>
-        </span>
         <!-- Menu -->
         <?php require_once('menu/menu.php') ?>
         <!-- Parallax -->
