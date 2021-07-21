@@ -14,7 +14,7 @@ if(isset($_SESSION['email'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <meta name="keywords" content="Terminos, Condiciones, Uso, Privacidad,">
+    <meta name="keywords" content="Terminos, Condiciones, Uso, Privacidad">
     <meta name="description" content="Mantente al tanto de nuestros terminos y condiciones y nuestras pol&iacute;ticas de privacidad">
     <title>T&eacute;rminos y condiciones | The Canario</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">

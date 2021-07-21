@@ -9,9 +9,9 @@
         <h5 class="white-text">Centro de informaci&oacute;n</h5>
         <ul>
             <li><a class="grey-text text-lighten-3" href="<?=$url?>/terminos-y-condiciones">T&eacute;rminos y condiciones</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Cookies</a></li>
+            <li><a class="grey-text text-lighten-3" href="<?=$url?>/cookies">Cookies</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Ayuda</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Quienes somos</a></li>
+            <li><a class="grey-text text-lighten-3" href="<?=$url?>/quienes-somos">Qui&eacute;nes somos</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
         </ul>
         </div>
