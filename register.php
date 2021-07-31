@@ -19,6 +19,18 @@ initSesion();
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QL2EFLFP0');
+    </script>
+
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>
@@ -29,8 +41,8 @@ initSesion();
 
         <section class="section row col s12 z-depth-1">
 
-            <h1 class="flow-text center">Crear una cuenta es fac&iacute;l</h1>
-            <p class="col s12">Al crear una cuenta en <strong>The Canario</strong> tendras mas privilegios dentro de la plataforma que un lector normal a la vez que podras disfrutar de una gran experiencia de usuario</p>
+            <h1 class="flow-text center">Crear una cuenta es f&aacute;cil</h1>
+            <p class="col s12">Al crear una cuenta en <strong>The Canario</strong> tendr&aacute;s m&aacute;s privilegios dentro de la plataforma que un lector normal, a la vez que podr&aacute;s disfrutar de una gran experiencia de usuario</p>
 
             <!-- Imprimir los errores -->
             <?php if(count($errors) > 0) : ?>
@@ -48,7 +60,7 @@ initSesion();
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
                         <input id="name" type="text" name="name" value="<?php if(isset($_POST["name"])){echo $name;} ?>" class="validate" required>
-                        <label for="name">name</label>
+                        <label for="name">Nombre</label>
                     </div>
 
                     <!-- Apellido -->
@@ -62,7 +74,7 @@ initSesion();
                     <div class="input-field col s12">
                         <i class="material-icons prefix">mail</i>
                         <input id="email" type="email" name="email" value="<?php if(isset($_POST["email"])){echo $email;} ?>" class="validate" required>
-                        <label for="email">Correo elctr&oacute;nico</label>
+                        <label for="email">Correo electr&oacute;nico</label>
                     </div>
 
                     <!-- Pass -->
@@ -81,7 +93,7 @@ initSesion();
                     <p>
                         <label>
                             <input type="checkbox" class="filled-in" value="acept" name="acept" required />
-                            <span>Al hacer click en "<b>Crear cuenta</b>" estas aceptando nuestros <a href="http://" target="_blank" rel="noopener noreferrer">t&eacute;rminos y condiciones</a></span>
+                            <span>Al hacer click en "<b>Crear cuenta</b>" est&aacute;s aceptando nuestros <a href="http://" target="_blank" rel="noopener noreferrer">t&eacute;rminos y condiciones</a></span>
                         </label>
                     </p>
 

@@ -88,7 +88,7 @@ if(isset($_POST['submit'])){
     //     array_push($errors, 'El titulo no puede tener menos de 21 carateres ni mas de 70');
     // }
 
-    if($descLen < 70 || $descLen > 151){
+    if($descLen < 70 || $descLen > 180){
         array_push($errors, 'La descripci&oacute;n no puede tener menos de 70 carateres ni mas de 150');
     }
 

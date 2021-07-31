@@ -48,6 +48,17 @@ require_once('selects/tecnologia/moreview.php');
     <meta property="og:url" content="<?=$url?>/tecnologia">
     <meta property="og:type" content="website">
 
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QL2EFLFP0');
+    </script>
+
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>

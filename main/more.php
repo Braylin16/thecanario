@@ -1,5 +1,5 @@
 <section class="col s12 section">
-    <h4 class="flow-text center">M&aacute;s publicaciones</h4>
+    <h5 class="flow-text center">M&aacute;s publicaciones</h5>
 </section>
 
 <section>
@@ -20,9 +20,9 @@
                                 <span class="grey-text"><?=$morePost['view']?></span>
                             </p>
                             
-                            <h3 class='black-text flow-text'>
+                            <h4 class='black-text flow-text tooltipped' data-position='bottom' data-tooltip='<?=$morePost['title']?>'>
                                 <?=mb_substr($morePost['title'], 0, 40).'...'?>
-                            </h3>
+                            </h4>
 
                             <p>
                                 <span class="green-text"><?=form_fecha($morePost['create_at_post'])?></span>

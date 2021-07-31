@@ -18,7 +18,7 @@ while ($countViews = $selectViews->fetch()) {
 }
 
 // Si no existe el registro, entonces creamos uno para luego actualizar las visitas
-if(empty($visitas)){
+if(empty($visitas) AND $ip_view != $ip_visitor){
     $insertView = $conexion->prepare('INSERT INTO view (id_view, id_view_post, view, browser_view, ip_view, create_at_view) VALUES(
         null, :id_post, 1, :ip_view, :browser, NOW())'
     );

@@ -2,7 +2,6 @@
 // Conexion a la base de datos
 try{
   $conexion = new PDO('mysql:host=localhost;dbname=thecanario', 'root', '');
-}catch(PDOExeption $e){
-  echo "Lo sentimos, ha ocurrido un error nuestros ingenieros trabajan para solucionarlo: " . $e->getMessage();
-  die();
+}catch(PDOException $e){
+  header('Location: http://localhost/thecanario/jobs');
 }

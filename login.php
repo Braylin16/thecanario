@@ -14,11 +14,23 @@ initSesion();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicial sesi&oacute;n | The Canario</title>
+    <title>Iniciar sesi&oacute;n | The Canario</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QL2EFLFP0');
+    </script>
+
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>
@@ -29,7 +41,7 @@ initSesion();
 
         <section class="section row col s12 z-depth-1">
 
-            <h1 class="flow-text center">Inicial sesi&oacute;n para tener m&aacute;s privilegios</h1>
+            <h1 class="flow-text center">Iniciar sesi&oacute;n para tener m&aacute;s privilegios</h1>
 
             <p class="flow-text red white-text center"><?php if(isset($error)){echo $error;} ?></p>
 

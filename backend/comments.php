@@ -19,7 +19,7 @@ if(isset($_POST['submitComment'])){
 
     // Si intenta comentar sin inicial sesion, le lanzamos un error sesion
     if(!isset($id_user)){
-        $sesion = "Debes <a href='http://localhost/thecanario/register' class='black-text'>registrate</a> o <a href='http://localhost/thecanario/login' class='black-text'>inicial sesi&oacute;n</a> para comentar";
+        $sesion = "Debes <a href='https://thecanario.com/register' class='black-text'>registrate</a> o <a href='https://thecanario.com/login' class='black-text'>inicial sesi&oacute;n</a> para comentar";
     }
 
     // Verificar que el comentario no nos llega vacio

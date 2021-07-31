@@ -35,7 +35,7 @@ aside {
 #body {
   padding: 10px 10px !important;
   border: 1px solid black !important;
-  height: 35rem;
+  min-height: 23rem;
   font-size: 1.3rem;
 }
 

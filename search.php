@@ -26,6 +26,18 @@ require_once('backend/search.php');
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
     <script src="jquery/jquery.min.js"></script>
     <script src="js/goto.js"></script>
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QL2EFLFP0');
+    </script>
+
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>

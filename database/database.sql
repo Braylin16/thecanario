@@ -1,6 +1,3 @@
-CREATE DATABASE thecanario;
-USE thecanario;
-
 CREATE TABLE users(
 id_user             int(250) AUTO_INCREMENT PRIMARY KEY,
 name                varchar(100) NOT NULL,

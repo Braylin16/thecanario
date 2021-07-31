@@ -25,11 +25,12 @@ require_once('selects/main/moreview.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta name="keywords" content="Astronomía, Educación, Historia, Tecnología, Blog">
-    <meta name="description" content="Disfruta del contenido mas rico en educación, astronomía, historia y tecnología">
+    <meta name="description" content="En este blog disfrutaras de los mejores artículos de Astronomía, historias y tecnología con la finalidad de que aprendas nuevos conocimientos educativos">
     <meta name="author" content="Dailin Ivan Payano" />
     <meta name="owner" content="Dailin Ivan Payano" />
     <meta name="robots" content="index, follow" />
-    <title>Astronomia, Educaci&oacute;n, Historia y Tecnolog&iacute;a | The Canario</title>
+    <meta name="google-site-verification" content="JczWepMq--cGVUuVLi77aIe5AexsTYKntaGUVqR2Zqo" />
+    <title>The Canario es un blog educativo para aprender cosas nuevas</title>
     <link rel="canonical" href="<?=$url?>" />
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
@@ -45,6 +46,17 @@ require_once('selects/main/moreview.php');
     <meta property="og:image" content="<?=$url?>/images/canario.webp">
     <meta property="og:url" content="<?=$url?>">
     <meta property="og:type" content="website">
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QL2EFLFP0');
+    </script>
 
 </head>
 <body class="grey lighten-5">

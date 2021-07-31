@@ -73,7 +73,7 @@ require_once('view/view.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php echo $post['title'] ?> | The Canario</title>
+    <title><?php echo $post['title'] ?></title>
     <link rel="canonical" href="<?=$url?>/article/<?=$post['id_post']?>/<?=clearUrl($post['title'])?>" />
     <base href="<?=$url?>/" />
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
@@ -98,6 +98,17 @@ require_once('view/view.php');
     <meta property="og:image" content="<?=$url?>/img/<?=$post['miniatura']?>">
     <meta property="og:url" content="<?=$url?>/article/<?=$post['id_post']?>/<?=clearUrl($post['title'])?>">
     <meta property="og:type" content="website">
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QL2EFLFP0');
+    </script>
 
 </head>
 <?php endforeach ?>

@@ -48,7 +48,7 @@
     <?php endif ?>
 
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Categorias</a></li>
+    <li><a class="subheader">Categor&iacute;as</a></li>
     <li><a href="astronomia" class="waves-effect" href="<?=$url?>/astronomia">Astronom&iacute;a</a></li>
     <li><a href="tecnologia" class="waves-effect" href="<?=$url?>/tecnologia">Tecnolog&iacute;a</a></li>
     <li><a href="historia" class="waves-effect" href="<?=$url?>/historia">Historia</a></li>

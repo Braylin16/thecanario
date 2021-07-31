@@ -10,9 +10,9 @@
         <ul>
             <li><a class="grey-text text-lighten-3" href="<?=$url?>/terminos-y-condiciones">T&eacute;rminos y condiciones</a></li>
             <li><a class="grey-text text-lighten-3" href="<?=$url?>/cookies">Cookies</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Ayuda</a></li>
+            <li><a class="grey-text text-lighten-3" href="help">Ayuda</a></li>
             <li><a class="grey-text text-lighten-3" href="<?=$url?>/quienes-somos">Qui&eacute;nes somos</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
+            <li><a class="grey-text text-lighten-3" href="<?=$url?>/blog">Blog</a></li>
         </ul>
         </div>
     </div>

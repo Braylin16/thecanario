@@ -1,6 +1,6 @@
 <!-- Las mas leidas -->
 <section class="green z-depth-1 col s12">
-    <h3 class="white-text flow-text center">Las m&aacute;s leidas</h3>
+    <h2 class="white-text flow-text center">Las m&aacute;s leidas</h2>
 
     <!-- Article -->
     <?php foreach($masleida as $leida) : ?>
@@ -14,7 +14,11 @@
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p class='black-text'><?=mb_substr($leida['title'], 0, 22).'...'?></p>
+
+                            <!-- Title -->
+                            <p class='black-text tooltipped' data-position="bottom" data-tooltip='<?=$leida['title']?>'><?=mb_substr($leida['title'], 0, 22).'...'?>
+                            </p>
+
                             </div>
                             <div class="card-action">
                                 <p class="green-text"><?=$leida['category']?></p>

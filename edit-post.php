@@ -76,6 +76,31 @@ noAdmin($roll, $url);
                         <label for="title">Titulo</label>
                     </div>
 
+                    <!-- BBCode -->
+                    <div class="input-field col s12">
+
+                        <button id="strong" type="button" class="waves-effect pink darken-2 btn">
+                            strong
+                        </button>
+
+                        <button id="b" type="button" class="waves-effect pink darken-2 btn">
+                            b
+                        </button>
+
+                        <button id="a" type="button" class="waves-effect pink darken-2 btn">
+                            a
+                        </button>
+
+                        <button id="h2" type="button" class="waves-effect pink darken-2 btn">
+                            h2
+                        </button>
+
+                        <button id="h3" type="button" class="waves-effect pink darken-2 btn">
+                            h3
+                        </button>
+
+                    </div>
+
                     <!-- Contenido de la entrada -->
                     <div class="input-field col s12">
                         <i class="material-icons prefix">web</i>
@@ -106,7 +131,7 @@ noAdmin($roll, $url);
                     <!-- Descripcion -->
                     <div class="input-field col s12">
                         <i class="material-icons prefix">description</i>
-                        <input id="input_text" type="text" name='desc' value="<?=$edit['description_post']?>" class="validate" data-length="150" minlength="70" maxlength="150" required>
+                        <input id="input_text" type="text" name='desc' value="<?=$edit['description_post']?>" class="validate" data-length="160" minlength="70" maxlength="160" required>
                         <label for="input_text">Descripci&oacute;n</label>
                     </div>
 
@@ -133,8 +158,8 @@ noAdmin($roll, $url);
 
                     <!-- Boton -->
                     <div class="input-field col s12">
-                        <button class="btn waves-effect green right" type="submit" name="submit">Publicar entrada
-                            <i class="material-icons left">near_me</i>
+                        <button class="btn waves-effect green right" type="submit" name="submit">Editar entrada
+                            <i class="material-icons left">edit</i>
                         </button>
                     </div>
 
@@ -152,5 +177,6 @@ noAdmin($roll, $url);
 </body>
 
 <!-- Scripts -->
-<script src="./materialize/js/materialize.min.js"></script>
+<script src='js/bbcode.js'></script>
+<script src="materialize/js/materialize.min.js"></script>
 </html>

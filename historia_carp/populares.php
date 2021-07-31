@@ -1,6 +1,6 @@
  <!-- Los mas populares -->
  <section class="col s12">
-    <h1 class="flow-text center">Los post m&aacute;s populares de <strong>historia</strong></h1>
+    <h1 class="flow-text center">Los post m&aacute;s populares de <strong>Historia</strong></h1>
 
     <!-- Articulos -->
     <?php foreach($views as $view) : ?>

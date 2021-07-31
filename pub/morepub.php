@@ -24,11 +24,9 @@
                             <p>
                                 <i class="material-icons left grey-text">visibility</i>
                                 <span class="grey-text"><?=$view?></span>
-
-                                <i class="material-icons red-text right">favorite_border</i>
                             </p>
                             
-                            <h2 class="flow-text black-text"><?=$title?></h2>
+                            <h3 class="flow-text black-text"><?=$title?></h3>
 
                             <span class='black-text'><?=$category?></span>
 

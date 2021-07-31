@@ -3,14 +3,14 @@
 // Si no esta logueado | Redirecionarlo
 function logueado(){
     if(!isset($_SESSION['email'])){
-        header('Location: http://localhost/thecanario/');
+        header('Location: https://thecanario.com/');
     }
 }
 
 // Si ha iniciado sesion | Redirecionarlo, funcion para login, register
 function initSesion(){
     if(isset($_SESSION['email'])){
-        header('Location: http://localhost/thecanario/');
+        header('Location: https://thecanario.com/');
     }
 }
 
@@ -63,4 +63,25 @@ function fechaHora($fecha){
     $fecha = "$dia de " . $meses[$mes] . " del $anio a las $hour:$min $meridiano";
     return $fecha;
 
+}
+
+// Detectar el nombre del navegador
+function getBrowserName($browser)
+{
+    if (strpos($browser, 'Opera') || strpos($browser, 'OPR/')) return 'Opera Mini';
+    elseif (strpos($browser, 'Edge')) return 'Microsoft Edge';
+    elseif (strpos($browser, 'Chrome')) return 'Google Chrome';
+    elseif (strpos($browser, 'Safari')) return 'Safari';
+    elseif (strpos($browser, 'Firefox')) return 'Mozilla Firefox';
+    elseif (strpos($browser, 'MSIE') || strpos($browser, 'Trident/7')) return 'Internet Explorer';
+   
+    return 'Desconocido';
+}
+
+// Detectar URL en el texto
+function url($text){
+    $text = html_entity_decode($text);
+    $text = "".$text;
+    $text = preg_replace('/(https{0,1}:\/\/[\w\-\.\:\/#?&=]*)/','<a href="$1" target="_blank">$1</a>',$text);
+    return $text;
 }

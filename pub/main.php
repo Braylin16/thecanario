@@ -29,13 +29,13 @@
     </figure>
 
     <!-- descripcion -->
-    <h3 class="col s12 flow-text">
+    <h2 class="col s12 flow-text">
         <?php echo $post['description_post'] ?>
-    </h3>
+    </h2>
 
     <!-- contenido -->
     <p id="parrafoContent" class="col s12">
-        <?php echo $post['entrada'] ?>
+        <?php echo nl2br($post['entrada']) ?>
     </p>
 
     <!-- Tags -->

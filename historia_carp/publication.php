@@ -1,5 +1,5 @@
 <section class="col s12">
-    <h1 class="flow-text center">M&aacute;s publicaciones de historia</h1>
+    <h1 class="flow-text center">M&aacute;s publicaciones de Historia</h1>
 
     <!-- Articulos -->
     <?php foreach($mypost as $morepost) : ?>

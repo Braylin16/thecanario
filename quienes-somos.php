@@ -14,24 +14,11 @@ if(isset($_SESSION['email'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <meta name="keywords" content="Quienes somo">
-    <meta name="description" content="Somos un proyectos de estudiantes de informática con el proposito de educar por Internet">
     <title>Qui&eacute;nes somos | The Canario</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
-
-    <!-- Redes Sociales -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@Thecanario">
-    <meta name="twitter:creator" content="@Thecanario">
-    <meta property="og:title" content="Qui&eacute;nes somos">
-    <meta property="og:description" content="Somos un proyectos de estudiantes de informática con el proposito de educar por Internet">
-    <meta property="og:image" content="<?=$url?>/images/canario.webp">
-    <meta property="og:url" content="<?=$url?>/cookies">
-    <meta property="og:type" content="website">
-
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>

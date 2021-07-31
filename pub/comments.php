@@ -43,7 +43,14 @@
 <!-- Comentario -->
 <?php foreach($comentC as $postC) : ?>
     <div class="col s2 m1 l1 xl1">
-        <img loading="lazy" src="img-profile/<?php echo $postC['photo_profile'] ?>" alt="<?php echo $postC['name'].' '.$postC['surname'] ?>" class="circle img-adaptable" height='60' width='60'>
+
+        <!-- Foto de perfil -->
+        <?php if($postC['photo_profile'] == true) : ?>
+            <img loading="lazy" src="img-profile/<?php echo $postC['photo_profile'] ?>" alt="<?php echo $postC['name'].' '.$postC['surname'] ?>" class="circle img-adaptable" height='60' width='60'>
+        <?php else : ?>
+            <img loading="lazy" src="images/usuario.png" alt="<?php echo $postC['name'].' '.$postC['surname'] ?>" class="circle img-adaptable" height='60' width='60'>
+        <?php endif ?>
+        
     </div>
     <div class="col s10 m11 l11 xl11">
         <!-- Nombre -->

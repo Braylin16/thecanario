@@ -31,7 +31,7 @@ if(isset($_POST['login'])){
     $pass = hash('sha512', $pass);
 
     // sentencia para saber si lo que introduce el usuario es correcto
-    $sentencia = $conexion->prepare("SELECT * FROM users WHERE email = :email AND password = :pass");
+    $sentencia = $conexion->prepare("SELECT * FROM users WHERE email = :email AND password = :pass AND status_u = 'acept'");
 
     $sentencia->execute(array(
         ':email' => $email,

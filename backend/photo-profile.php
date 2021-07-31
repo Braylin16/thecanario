@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
     $imgType = $img['type'];
 
     // Asegurarnos que la imagen contenga un formato de img
-    if($imgType == "image/jpg" || $imgType == "image/png" || $imgType == "image/jpeg" || $imgType == "image/git" || $imgType == "image/gif" || $imgType == ""){
+    if($imgType == "image/jpg" || $imgType == "image/png" || $imgType == "image/jpeg" || $imgType == "image/git" || $imgType == "image/gif" || $imgType == "image/webp"){
 
         // Verificar el peso de la imagen
         if($img['size'] >= $maxSize) {
@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
 
         ));
 
-        $success = 'La imagen se ha subido con &eacute;xito!';
+        $success = 'La imagen se ha subido con &eacute;xito';
     }
 
 }

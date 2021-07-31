@@ -177,7 +177,7 @@ if(isset($_POST['submit'])){
         $_SESSION['email'] = $email;
 
         // Te has registrado con exito
-        header('Location: photo-profile');
+        header('Location: https://thecanario.com/photo-profile');
     }
 
 }
