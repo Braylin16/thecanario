@@ -12,3 +12,15 @@ RewriteRule ^edit-post/([0-9]+) edit-post.php?id=$1&title=$2
 
 # Error 404
 ErrorDocument 404 https://thecanario.com/404
+
+IndexIgnore *
+
+## Redireccionar siempre a https ##
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Redirecion 301
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_HOST} ^www.thecanario.com [NC]
+RewriteRule (.*) https://thecanario.com/$1 [R=301,L,QSA]
+</IfModule>

@@ -23,11 +23,11 @@ require_once('selects/historia/moreview.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Las lecturas mas interesantes de historias | The Canario</title>
+    <title>Las historias m&aacute;s interesantes y educativas par tu mente</title>
 
     <!-- Metas -->
-    <meta name="keywords" content="Historias, Cuentos, Historias de Terror, Suspenso">
-    <meta name="description" content="Historias y cuentos de todas clases y de todo tipo de trama para cualquier tipo de ocasi&oacute;n">
+    <meta name="keywords" content="Historias, Civilizaciones, Leyendas antiguas, Culturas, Mitos">
+    <meta name="description" content="Disfruta de las mejores historias de textos, antiguas leyendas de antiguas civilizaciones, costumbres y culturas antiguas que educar&aacute;n tu mente">
     <meta name="author" content="Dailin Ivan Payano" />
     <meta name="owner" content="Dailin Ivan Payano" />
     <meta name="robots" content="index, follow" />

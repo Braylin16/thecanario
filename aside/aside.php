@@ -31,8 +31,8 @@
             </div>
 
             <!-- Button -->
-            <button class="btn-small waves-effect green right" type="submit" name="submit">Enviar
-                <i class="material-icons left">near_me</i>
+            <button class="btn-small waves-effect green right" type="submit" name="submit">Suscribirme
+                <i class="material-icons left">notifications</i>
             </button>
 
         </form>

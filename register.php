@@ -20,6 +20,19 @@ initSesion();
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
 
+    <!-- Metas -->
+    <meta name="description" content="Registrate para tener m&aacute;s privilegios en esta comunidad educativa de Internet">
+
+    <!-- Redes Sociales -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Thecanario">
+    <meta name="twitter:creator" content="@Thecanario">
+    <meta property="og:title" content="Registrarse">
+    <meta property="og:description" content="Registrate para recibir notificaciones y poder comentar en nuestras publicaciones">
+    <meta property="og:image" content="<?=$url?>/images/canario.webp">
+    <meta property="og:url" content="<?=$url?>">
+    <meta property="og:type" content="website">
+
     <!-- Google Analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
@@ -41,7 +54,7 @@ initSesion();
 
         <section class="section row col s12 z-depth-1">
 
-            <h1 class="flow-text center">Crear una cuenta es f&aacute;cil</h1>
+            <h1 class="flow-text center">Registrarse</h1>
             <p class="col s12">Al crear una cuenta en <strong>The Canario</strong> tendr&aacute;s m&aacute;s privilegios dentro de la plataforma que un lector normal, a la vez que podr&aacute;s disfrutar de una gran experiencia de usuario</p>
 
             <!-- Imprimir los errores -->
@@ -93,7 +106,7 @@ initSesion();
                     <p>
                         <label>
                             <input type="checkbox" class="filled-in" value="acept" name="acept" required />
-                            <span>Al hacer click en "<b>Crear cuenta</b>" est&aacute;s aceptando nuestros <a href="http://" target="_blank" rel="noopener noreferrer">t&eacute;rminos y condiciones</a></span>
+                            <span>Al hacer click en "<b>Crear cuenta</b>" est&aacute;s aceptando nuestros <a href="https://thecanario.com/terminos-y-condiciones" target="_blank" rel="noopener noreferrer">t&eacute;rminos y condiciones</a></span>
                         </label>
                     </p>
 

@@ -1,30 +1,33 @@
 <!-- Las mas leidas -->
 <section class="green z-depth-1 col s12">
-    <h2 class="white-text flow-text center">Las m&aacute;s leidas</h2>
+    <h2 class="white-text flow-text center">Las m&aacute;s le&iacute;das</h2>
 
     <!-- Article -->
     <?php foreach($masleida as $leida) : ?>
-        <article class="col s12 m4 l3 xl3">
+
+
+        <article class='col s12 m4 l3 xl3'>
             <a href="<?=$url?>/article/<?=$leida['id_post']?>/<?=clearUrl($leida['title'])?>">
                 <div class="col s12 m12 xl12">
-                    <!-- <h3 class="header">Horizontal Card</h3> -->
-                    <div class="card horizontal hoverable">
-                    <div class="card-image">
-                        <img loading='lazy' class='img-adaptable' src="img/<?=$leida['miniatura']?>" height='190' width='100' alt="<?=$leida['title']?>" />
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
+                <div class='card hoverable card-article'>
 
-                            <!-- Title -->
-                            <p class='black-text tooltipped' data-position="bottom" data-tooltip='<?=$leida['title']?>'><?=mb_substr($leida['title'], 0, 22).'...'?>
-                            </p>
-
-                            </div>
-                            <div class="card-action">
-                                <p class="green-text"><?=$leida['category']?></p>
-                            </div>
-                        </div>
+                    <div class='card-image'>
+                        <img loading='lazy' class='img-adaptable' src="img/<?=$leida['miniatura']?>" height='200' width='100' title='<?=$leida['title']?>' alt="<?=$leida['title']?>" />
+                        <b class='card-title green-text'><?=$leida['category']?></b>
                     </div>
+
+                    <div class="card-content">
+
+                    <h4 class='flow-text black-text tooltipped' data-position='bottom' data-tooltip='<?=$leida['title']?>'>
+                        <?=$leida['title']?>        
+                    </h4>
+
+                    <p>
+                        <span class="green-text"><?=form_fecha($leida['create_at_post'])?></span>
+                    </p>
+
+                    </div>
+                </div>
                 </div>
             </a>
         </article>

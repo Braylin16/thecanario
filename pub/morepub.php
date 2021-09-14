@@ -8,7 +8,7 @@
                 $id_more_post = $row['id_post'];
                 $img = $row['miniatura'];
                 $title = $row['title'];
-                $view = $row['view'];
+                (int)$view = $row['view'];
                 $category = $row['category'];
                 $fecha = $row['create_at_post'];
 
@@ -17,24 +17,19 @@
                 <a href="<?=$url?>/article/<?=$id_more_post?>/<?=clearUrl($title)?>">
                     <div class="col s12 m6 l12 xl12">
                         <div class="card hoverable">
+                            
                             <div class="card-image">
-                                <img loading="lazy" src="img/<?=$img?>" alt="<?=$title?>">
+                                <img loading="lazy" src="img/<?=$img?>" title='<?=$title?>' alt="<?=$title?>" class='img-adaptable' height='160' />
                             </div>
                             <div class="card-content">
                             <p>
                                 <i class="material-icons left grey-text">visibility</i>
-                                <span class="grey-text"><?=$view?></span>
+                                <span class="grey-text tooltipped" data-position='bottom' data-tooltip='<?=number_format($view)?> Visualizaciones'>
+                                    <?=abreView($view)?>
+                                </span>
                             </p>
                             
                             <h3 class="flow-text black-text"><?=$title?></h3>
-
-                            <span class='black-text'><?=$category?></span>
-
-                            <p>
-                                <span class="green-text">
-                                <?=form_fecha($fecha)?>
-                                </span>
-                            </p>
 
                             </div>
                         </div>

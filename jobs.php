@@ -11,8 +11,8 @@
 </head>
 <body>
 
-    <h1>Nuestros ingenieron estan trabajado para solucionar el problema lo mas pronto posible</h1>
-    <p class="zoom-area">Nuestros ingenieros estan trabajando duro para estar en l&iacute;nea lo m&aacute;s pronto posible</p>
+    <h1>Nuestros ingenieron estan trabajado para solucionar el problema lo más pronto posible</h1>
+    <p class="zoom-area">Nuestros ingenieros están trabajando duro para estar en l&iacute;nea lo m&aacute;s pronto posible</p>
     <section class="error-container">
     <img src="images/jobs.webp" alt="robot trabajando" height='90' width='84' />
     <span><span>5</span></span>

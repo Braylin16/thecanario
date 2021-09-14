@@ -20,6 +20,19 @@ initSesion();
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
 
+    <!-- Metas -->
+    <meta name="description" content="Inicia sesi&oacute;n para realizar opiniones y disfrutar del contenido m&aacute;s educativo">
+
+    <!-- Redes Sociales -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Thecanario">
+    <meta name="twitter:creator" content="@Thecanario">
+    <meta property="og:title" content="Iniciar sesi&oacute;n">
+    <meta property="og:description" content="Inicia sesi&oacute;n para poder escribir comentarios en nuestras publicaciones">
+    <meta property="og:image" content="<?=$url?>/images/canario.webp">
+    <meta property="og:url" content="<?=$url?>">
+    <meta property="og:type" content="website">
+
     <!-- Google Analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
@@ -41,7 +54,7 @@ initSesion();
 
         <section class="section row col s12 z-depth-1">
 
-            <h1 class="flow-text center">Iniciar sesi&oacute;n para tener m&aacute;s privilegios</h1>
+            <h1 class="flow-text center">Inicia Sesi&oacute;n</h1>
 
             <p class="flow-text red white-text center"><?php if(isset($error)){echo $error;} ?></p>
 

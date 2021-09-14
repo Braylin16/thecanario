@@ -31,12 +31,23 @@ aside {
   border: 1px solid black !important;
 }
 
+@-moz-document url-prefix() {
+  /* Input de buscador */
+  .input-field input[type=search] {
+    padding: 0px 6px !important;
+    margin: 0px 3.3rem !important;
+    border: 1px solid black !important;
+  } 
+}
+
 /* TextArea para escribir el articulo */
 #body {
   padding: 10px 10px !important;
   border: 1px solid black !important;
   min-height: 23rem;
+  max-height: 23rem;
   font-size: 1.3rem;
+  overflow: auto;
 }
 
 /* label input type search */
@@ -92,6 +103,12 @@ section fieldset {
 /* La imagen de perfil que esta al lado del nav para el dropdown de opciones pc */
 .img-dropdown {
   margin: 16px 60px 0px 70px;
+}
+
+/* Colocar una altura minimas a los card  */
+.card {
+  min-height: 28rem !important;
+  max-height: 28rem !important;
 }
 
 /* Para que el texto del articulo sea grande y pueda verse bien */

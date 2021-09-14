@@ -18,11 +18,16 @@ require_once('backend/contact.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex" />
     <title>Comunicate con nosotros | The Canario</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
+
+    <!-- Metas -->
+    <meta name="description" content="Si tiene cualquier duda o quieres saber m&aacute;s sobre nosotros estamos atento para responder sus dudas">
+
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>
@@ -33,7 +38,7 @@ require_once('backend/contact.php');
 
         <section class="section row col s12 z-depth-1">
 
-            <h1 class="flow-text center">Entra en contacto con nuestro equipo</h1>
+            <h1 class="flow-text center">Cont&aacute;ctenos</h1>
                 <p class="center">
                     Nuestro equipo se pondrá en contacto con usted en el menor tiempo posible.
                     Trate de explicarnos de manera contundente su inquietud.

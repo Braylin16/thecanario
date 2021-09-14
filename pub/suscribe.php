@@ -3,7 +3,7 @@
 
     <fieldset>
         <legend class="flow-text green-text">Recibe nuestras notificaciones</legend>
-        <h3 class="flow-text center">Agregate a nuestra lista de notificaciones</h3>
+        <h4 class="flow-text center">Agregate a nuestra lista de notificaciones</h4>
         <p class="center">
             Suscribete para recibir todas las semanas nuestras mejores publicaciones
         </p>
@@ -31,8 +31,8 @@
                     <label for="email">Correo electr&oacute;nico</label>
 
                     <!-- Boton -->
-                    <button class="btn waves-effect green right" type="submit" name="submit">Enviar
-                        <i class="material-icons left">near_me</i>
+                    <button class="btn waves-effect green right" type="submit" name="submit">Suscribirme
+                        <i class="material-icons left">notifications</i>
                     </button>
 
                     </div>

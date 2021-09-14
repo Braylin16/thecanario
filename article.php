@@ -126,7 +126,6 @@ require_once('view/view.php');
         <?php require_once('pub/suscribe.php') ?>
         <!-- Comentarios -->
         <?php require_once('pub/comments.php') ?>
-
     </main>
     
     <!-- Footer -->
@@ -134,5 +133,5 @@ require_once('view/view.php');
 </body>
 
 <!-- Scripts -->
-<script src="./materialize/js/materialize.min.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
 </html>

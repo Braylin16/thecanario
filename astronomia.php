@@ -23,11 +23,11 @@ require_once('selects/astronomia/moreview.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Disfruta de interesantes lecturas de Astronom&iacute;a | The Canario</title>
+    <title>Articulos de Astronom&iacute;a, Cosmos y Universo</title>
 
     <!-- Metas -->
-    <meta name="description" content="Los articulos m&aacute;s interesantes de Astronom&iacute;a y ciencias ue rodean el universo disponibles aqu&iacute;">
-    <meta name="keywords" content="Astronom&iacute;a, Astronauta, Espacio, Cosmo, Planeta, Cosmonauta">
+    <meta name="description" content="Las lecturas m&aacute;s interesante sobre el universo, cosmos, agujeros negros y toda la materia del universo que te apasiona en el mundo de la Astronomia">
+    <meta name="keywords" content="Astronom&iacute;a, Astronauta, Espacio, Cosmo, Planeta, Universo">
     <meta name="author" content="Dailin Ivan Payano" />
     <meta name="owner" content="Dailin Ivan Payano" />
     <meta name="robots" content="index, follow" />

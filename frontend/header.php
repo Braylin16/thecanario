@@ -16,7 +16,7 @@
 
                 <!-- Titulo -->
                 <a href="<?=$url?>" class="brand-logo black-text">
-                    <strong>The Canario</strong>
+                    The Canario
                 </a>
                 
                 <ul class="right hide-on-med-and-down">

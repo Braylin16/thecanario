@@ -1,6 +1,6 @@
  <!-- Los mas populares -->
  <section class="col s12">
-    <h1 class="flow-text center">Las publicaciones m&aacute;s populares</h1>
+    <h1 class="flow-text center">Otras categorías</h1>
 
     <!-- Articulos -->
     <?php foreach($views as $view) : ?>
@@ -9,10 +9,10 @@
                 <div class="col s12 m6 l4 xl3">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img loading='lazy' src="img/<?=$view['miniatura']?>" alt="<?=$view['title']?>" />
+                        <img loading='lazy' src="img/<?=$view['miniatura']?>" title='<?=$view['title']?>' alt="<?=$view['title']?>" />
                     </div>
                 <div class="card-content">
-                    <h2 class="flow-text black-text"><?=$view['title']?></h2>
+                    <h3 class="flow-text black-text"><?=$view['title']?></h3>
                     <p>
                         <span class="green-text"><?=form_fecha($view['create_at_post'])?></span>
                     </p>

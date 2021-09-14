@@ -1,7 +1,7 @@
 <?php
 // Conexion a la base de datos
 try{
-  $conexion = new PDO('mysql:host=localhost;dbname=thecanario', 'root', '');
+  $conexion = new PDO('mysql:host=localhost;dbname=thecanar_blog', 'thecanar_root', '%R7kixBKq?r.');
 }catch(PDOException $e){
-  header('Location: http://localhost/thecanario/jobs');
+  header('Location: https://thecanario.com/jobs');
 }

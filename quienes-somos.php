@@ -19,6 +19,7 @@ if(isset($_SESSION['email'])){
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/materialize-icons.css" />
+    <meta name="robots" content="noindex" />
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>

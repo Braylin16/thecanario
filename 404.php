@@ -8,6 +8,7 @@
     <title>La p&aacute;gina que intentas visitar no existe 404 | The Canario</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/404.css">
+    <meta name="robots" content="noindex" />
 
     <!-- Google Analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->

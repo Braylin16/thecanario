@@ -1,5 +1,5 @@
 <section class="col s12">
-    <h1 class="flow-text center">M&aacute;s publicaciones de Historia</h1>
+    <h2 class="flow-text center">M&aacute;s publicaciones de Historia</h2>
 
     <!-- Articulos -->
     <?php foreach($mypost as $morepost) : ?>
@@ -8,10 +8,10 @@
                 <div class="col s12 m6 l4 xl3">
                     <div class="card hoverable">
                         <div class="card-image">
-                            <img loading='lazy' src="img/<?=$morepost['miniatura']?>" alt="<?=$morepost['title']?>">
+                            <img loading='lazy' src="img/<?=$morepost['miniatura']?>" title='<?=$morepost['title']?>' alt="<?=$morepost['title']?>" height='160' />
                         </div>
                     <div class="card-content">
-                        <h3 class="flow-text black-text"><?=$morepost['title']?></h3>
+                        <h4 class="flow-text black-text"><?=$morepost['title']?></h4>
                             <p>
                                 <span class="green-text"><?=form_fecha($morepost['create_at_post'])?></span>
                             </p>

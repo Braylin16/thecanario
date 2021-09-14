@@ -58,6 +58,9 @@ require_once('selects/main/moreview.php');
     gtag('config', 'G-1QL2EFLFP0');
     </script>
 
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-4078763466234277" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>

@@ -1,4 +1,5 @@
-<?php session_start();
+<?php session_start(); 
+
 require_once('connection/connection.php');
 $email = $_SESSION['email'];
 require_once('functions/functions.php');
@@ -17,7 +18,8 @@ noAdmin($roll, $url);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear entrada | The Canario</title>
+    <meta name="robots" content="noindex" />
+    <title id="titlePost">Crear una entrada</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
@@ -50,7 +52,7 @@ noAdmin($roll, $url);
 
             <div class="divider"></div>
 
-            <form class="col s12" method="POST" enctype="multipart/form-data">
+            <form id='formPost' class="col s12" method="POST" enctype="multipart/form-data">
                 <div class="row">
 
                     <!-- Titulo -->
@@ -63,24 +65,24 @@ noAdmin($roll, $url);
                     <!-- BBCode -->
                     <div class="input-field col s12">
 
+                        <button id="b" type="button" class="waves-effect pink darken-2 btn">
+                            <i class='material-icons'>format_bold</i>
+                        </button>
+
+                        <button id="a" type="button" class="waves-effect pink darken-2 btn">
+                            <i class='material-icons'>link</i>
+                        </button>
+
+                        <button id="i" type="button" class="waves-effect pink darken-2 btn">
+                            <i class='material-icons'>format_italic</i>
+                        </button>
+
                         <button id="strong" type="button" class="waves-effect pink darken-2 btn">
                             strong
                         </button>
 
-                        <button id="b" type="button" class="waves-effect pink darken-2 btn">
-                            b
-                        </button>
-
-                        <button id="a" type="button" class="waves-effect pink darken-2 btn">
-                            a
-                        </button>
-
-                        <button id="h2" type="button" class="waves-effect pink darken-2 btn">
-                            h2
-                        </button>
-
-                        <button id="h3" type="button" class="waves-effect pink darken-2 btn">
-                            h3
+                        <button id="abbr" type="button" class="waves-effect pink darken-2 btn">
+                            abbr
                         </button>
                         
                     </div>
@@ -108,7 +110,7 @@ noAdmin($roll, $url);
                     <div class="input-field col s12">
                         <i class="material-icons prefix">description</i>
                         <input id='imgDesc' type="text" name="imgDesc" value="<?php if(isset($_POST["imgDesc"])){echo $imgDesc;} ?>" class="validate" maxlength="100" required>
-                        <label for="imgDesc">descripci&oacute;n de la imagen</label>
+                        <label for="imgDesc">Descripci&oacute;n de la imagen</label>
                     </div>
 
                     <!-- Descripcion -->
@@ -122,7 +124,7 @@ noAdmin($roll, $url);
                     <div class="input-field col s12">
                         <select name="category">
                         <option value="" disabled selected>Elige una categoria</option>
-                        <option value="Astronomia">Astronomia</option>
+                        <option value="Astronomía">Astronom&iacute;a</option>
                         <option value="Tecnología">Tecnolog&iacute;a</option>
                         <option value="Historia">Historia</option>
                         <option value="Otros">Otros</option>
@@ -160,5 +162,7 @@ noAdmin($roll, $url);
 
 <!-- Scripts -->
 <script src="js/bbcode.js"></script>
+<script src="js/post.js"></script>
+<script src="js/realtime.js"></script>
 <script src="materialize/js/materialize.min.js"></script>
 </html>

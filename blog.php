@@ -16,6 +16,7 @@ if(isset($_SESSION['email'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta name="keywords" content="blog, noticias, cambios">
     <meta name="description" content="En esta sesion se daran las noticias y anunciaran cambios de la web">
+    <meta name="robots" content="noindex" />
     <title>Ultimas noticias y blog oficial de The Canario | The Canario</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">

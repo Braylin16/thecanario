@@ -16,6 +16,7 @@ if(isset($_SESSION['email'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta name="keywords" content="Cookies">
     <meta name="description" content="The canario utliza Cookies para garantizar una mejor experiencia de usuario.">
+    <meta name="robots" content="noindex" />
     <title>Cookies | The Canario</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">

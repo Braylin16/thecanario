@@ -32,6 +32,17 @@ if(isset($_SESSION['email'])){
     <meta property="og:url" content="<?=$url?>">
     <meta property="og:type" content="website">
 
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL2EFLFP0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QL2EFLFP0');
+    </script>
+
 </head>
 <body class="grey lighten-5">
     <?php require_once('frontend/header.php') ?>
@@ -54,7 +65,7 @@ if(isset($_SESSION['email'])){
                 <li><a href="#uso">Uso de la p&aacute;gina web</a></li>
                 <li><a href="#acept">Aceptaci&oacute;n de los t&eacute;rminos y condiciones</a></li>
                 <li><a href="#privacidad">Pol&iacute;tica de privacidad de <b>thecanario.com</b></a></li>
-                <li><a href="visita">Visitas a la p&aacute;gina web</a></li>
+                <li><a href="#visita">Visitas a la p&aacute;gina web</a></li>
                 <li><a href="#procesamiento">Procesamiento de datos</a></li>
                 <li><a href="#analytics">Google Analytics</a></li>
                 <li><a href="#fonts">Google Fonts</a></li>
@@ -92,7 +103,7 @@ if(isset($_SESSION['email'])){
             <article id='privacidad'>
                 <h3 class="flow-text">4. Pol&iacute;tica de privacidad de <b>thecanario.com</b></h3>
                 <p>
-                    En <b>thecanario.com</b> entendemos que tus datos personales son muy importantes y por tal raz&oacute;n no pedimos mas datos de los que necesitamos. Por tal razon dividimos los datos en dos, unos son los datos que pedimos al usuario y otro son los datos que recogemos del navegador mientras visitas el sitio web.
+                    En <b>thecanario.com</b> entendemos que tus datos personales son muy importantes y por tal raz&oacute;n no pedimos más datos de los que necesitamos. Por tal razon dividimos los datos en dos, unos son los datos que pedimos al usuario y otro son los datos que recogemos del navegador mientras visitas el sitio web.
                     <h4 class="flow-text">4.1 Datos que pedimos al usuario</h4>
                     <ol type='I'>
                         <li>Nombre</li>
@@ -101,7 +112,7 @@ if(isset($_SESSION['email'])){
                         <li>Una foto para ser colocada de perfil</li>
                         <li>Una contrase&ntilde;a que el usuario puede crear</li>
                     </ol>
-                    Estos datos son usuados para mostrarlos en caso de que el usuario registrado en nuestro sistema decida publicar una opini&oacute;n en uno de nuestro articulos publicados. El <b>Correo electr&oacute;nico</b> es un dato que no lo mostramos en publico, solo lo usamos para enviar notificaciones por correo electr&oacute;nico.
+                    Estos datos son usados para mostrarlos en caso de que el usuario registrado en nuestro sistema decida publicar una opini&oacute;n en uno de nuestro articulos publicados. El <b>Correo electr&oacute;nico</b> es un dato que no lo mostramos en publico, solo lo usamos para enviar notificaciones por correo electr&oacute;nico.
                     <h4 class="flow-text">4.2 Datos que recopilamos del navegador</h4>
                     <ol type='a'>
                         <li>El navegador que estas usando ejemp.: <b>Firefox, Google Chrome, Edge etc..</b></li>
@@ -157,7 +168,7 @@ if(isset($_SESSION['email'])){
             </article>
 
             <!-- insercion -->
-            <article id='fonts'>
+            <article id='video'>
                 <h3 class="flow-text">9. V&iacute;deos de redes sociales y YouTube insertados</h3>
                 <p>
                    En muchas publicaciones de este sitio web puedes encontrar videos de YouTube, Facebook, Instagram entre otros insertados en nuestro sitio web, ademas de publicaciones de redes sociales. Si usted reproduce un video o oprime el enlace de la publicaci&oacute;n usted sera redirigido a sitio web de terceros y su informaci&oacute;n sera recibida y almacenada por otros proveedores.
@@ -165,7 +176,7 @@ if(isset($_SESSION['email'])){
             </article>
 
             <!-- trasparencia -->
-            <article id='fonts'>
+            <article id='datos'>
                 <h3 class="flow-text">10. Trasparencia de datos</h3>
                 <p>
                    Solo facilitaremos sus datos aqui descritos cuando sea unicamente necesario para el uso correcto de nuestro servicio o en otras circunstancia que este permitida por la ley. Ademas de su obligacion legar de cumplir con todos los reglamentos sobre la ley de protecci&oacute;n de datos estos proveedores de servicios están obligados a cumplir requisitos contractuales adicionales de protección de datos.
