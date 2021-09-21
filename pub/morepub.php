@@ -1,5 +1,21 @@
 <aside>
     <section id="morepubl" class="col s12 m12 l3 xl3 right">
+
+        <!-- ads -->
+        <article>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4078763466234277"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-4078763466234277"
+                 data-ad-slot="8578724487"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </article>
+
         <h2 class="flow-text center">M&aacute;s publicaciones</h2>
 
         <?php 

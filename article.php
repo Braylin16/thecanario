@@ -118,6 +118,8 @@ require_once('view/view.php');
     <main class="row section col s12">
         <!-- Menu -->
         <?php require_once('menu/menu.php') ?>
+        <!-- ads -->
+        <?php require_once('pub/ads.php') ?>
         <!-- Contenido del articulo -->
         <?php require_once('pub/main.php') ?>
         <!-- Mas publicaciones -->

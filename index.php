@@ -68,6 +68,8 @@ require_once('selects/main/moreview.php');
     <main class="row section col s12">
         <!-- Menu -->
         <?php require_once('menu/menu.php') ?>
+        <!-- ads -->
+        <?php require_once('main/ads.php') ?>
         <!-- Email para notificaciones -->
         <?php require_once('aside/aside.php') ?>
         <!-- Content -->
